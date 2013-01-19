@@ -49,7 +49,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    [cell.imageView setImage:[UIImage imageNamed:@"chris.png"]];
+    [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
     [cell.textLabel setText:@"Chris Wendel"];
     return cell;
 }
