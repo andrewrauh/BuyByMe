@@ -124,7 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z24-M0-6RM"/>
                     <connections>
-                        <outlet property="tbView" destination="Y5i-dK-i7e" id="noa-zV-P3e"/>
+                        <outlet property="tbView" destination="Y5i-dK-i7e" id="khp-R1-h9D"/>
                         <segue destination="uU7-A7-qRL" kind="push" id="KsC-lt-coc"/>
                     </connections>
                 </viewController>
@@ -364,6 +364,9 @@
         </class>
         <class className="InfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pressBuy:"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
