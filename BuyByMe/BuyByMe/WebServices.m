@@ -54,12 +54,13 @@
                 [allItems addObject:newItem];
 //                [allItems addObject:[dict objectForKey:@"description"]];
 //                NSLog(@"AllItems is %@",allItems);
-                [[self delegate] reloadTableView];
 
             }
         }
        
     });
+    [[self delegate] reloadTableView];
+
 }
 
 -(void)retrieveAllUserData {
@@ -73,7 +74,6 @@
 }
 
 -(void)retrieveSellerUserData:(NSString*)postedID {
-    
     
     NSURLRequest *main = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://buybyme.herokuapp.com/api/api/api/user/%@", postedID]]];
     
@@ -101,7 +101,6 @@
             NSDictionary *parsedDict = (NSDictionary *)parsedObject;
             sellingUser = [NSMutableDictionary dictionaryWithDictionary:parsedDict];
         }
-        
     });
 }
 

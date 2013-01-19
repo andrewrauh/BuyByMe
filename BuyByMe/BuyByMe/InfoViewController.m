@@ -63,9 +63,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 -(IBAction)pressBuy:(id)sender{
     WebServices *webServices = [WebServices sharedInstance];
-    
-    
-    
+    //[webServices retrieveSellerUserData:item.postedID];
     
 }
 
