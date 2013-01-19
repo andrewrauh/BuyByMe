@@ -18,4 +18,6 @@
 
 @property (nonatomic, strong) VenmoClient *venmoClient;
 
+-(IBAction)pressBuy:(id)sender;
+
 @end

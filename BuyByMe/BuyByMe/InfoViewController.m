@@ -7,6 +7,7 @@
 //
 
 #import "InfoViewController.h"
+#import "WebServices.h"
 
 static NSString *const kVenmoAppId      = @"1220";
 static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
@@ -59,6 +60,15 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
         [self presentModalViewController:venmoViewController animated:YES];
     }
 }
+
+-(IBAction)pressBuy:(id)sender{
+    WebServices *webServices = [WebServices sharedInstance];
+    
+    
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

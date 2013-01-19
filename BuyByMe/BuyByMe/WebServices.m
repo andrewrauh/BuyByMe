@@ -9,7 +9,8 @@
 #import "WebServices.h"
 
 @implementation WebServices
-@synthesize loggedInUser, allItems, delegate;
+@synthesize loggedInUser, allItems, delegate, sellingUser;
+
 +(id)sharedInstance
 {
     static id sharedInstance = nil;
@@ -59,9 +60,6 @@
         }
        
     });
-    
-    NSLog(@"AllItems is %@",allItems);
-        
 }
 
 -(void)retrieveAllUserData {
@@ -72,6 +70,39 @@
 -(void)sendNewItemToServer:(Item*)newItem {
   
     
+}
+
+-(void)retrieveSellerUserData:(NSString*)postedID {
+    
+    
+    NSURLRequest *main = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://buybyme.herokuapp.com/api/api/api/user/%@", postedID]]];
+    
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        NSData *data = [NSURLConnection sendSynchronousRequest:main
+                                             returningResponse:&response
+                                                         error:&error];
+        
+        NSString *json = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        
+        id parsedObject = nil;
+        NSError *parseError = nil;
+        
+        if (json != nil && [json isKindOfClass:[NSString class]] && [json length] > 0) {
+            parsedObject = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSASCIIStringEncoding]
+                                                           options:0
+                                                             error:&parseError];
+        }
+        
+        if ([parsedObject isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *parsedDict = (NSDictionary *)parsedObject;
+            sellingUser = [NSMutableDictionary dictionaryWithDictionary:parsedDict];
+        }
+        
+    });
 }
 
 - (NSData *) takeNewItemAndCreateJSON:(Item*)newItem
