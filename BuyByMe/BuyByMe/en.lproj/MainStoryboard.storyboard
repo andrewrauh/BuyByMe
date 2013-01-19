@@ -165,12 +165,13 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-An-kSA">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="6te-GZ-p2H"/>
+                                    <constraint firstAttribute="width" constant="91" id="3t7-Ch-TgB"/>
+                                    <constraint firstAttribute="height" constant="90" id="XDp-Vw-q2K"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFb-Fa-wvn">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="86T-RJ-Keh"/>
+                                    <constraint firstAttribute="height" constant="90" id="Hdj-st-ujW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
@@ -192,16 +193,18 @@
                             <constraint firstItem="TSl-WB-n8a" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" constant="94" id="6U5-Go-FQ3"/>
                             <constraint firstItem="Ms8-cF-qPh" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="114" id="C9y-7f-IIA"/>
                             <constraint firstItem="UwE-An-kSA" firstAttribute="trailing" secondItem="kFb-Fa-wvn" secondAttribute="trailing" type="default" id="MhY-om-FJM"/>
-                            <constraint firstItem="kFb-Fa-wvn" firstAttribute="top" secondItem="UwE-An-kSA" secondAttribute="top" type="default" id="Tip-Dg-9Tl"/>
+                            <constraint firstItem="UwE-An-kSA" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="11" id="T81-Yb-afq"/>
                             <constraint firstItem="kFb-Fa-wvn" firstAttribute="centerX" secondItem="Ms8-cF-qPh" secondAttribute="centerX" type="default" id="Yrn-Vr-iXY"/>
-                            <constraint firstItem="UwE-An-kSA" firstAttribute="bottom" secondItem="kFb-Fa-wvn" secondAttribute="bottom" type="default" id="fOI-0p-6cz"/>
-                            <constraint firstItem="kFb-Fa-wvn" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="11" id="i54-xp-zXb"/>
+                            <constraint firstItem="kFb-Fa-wvn" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="12" id="haj-DS-jt3"/>
                             <constraint firstItem="Ms8-cF-qPh" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" type="default" id="j7U-7Z-l6U"/>
                             <constraint firstItem="kFb-Fa-wvn" firstAttribute="leading" secondItem="UwE-An-kSA" secondAttribute="leading" type="default" id="my9-yc-Spq"/>
                             <constraint firstItem="TSl-WB-n8a" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="63" id="xOI-au-DHa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LKk-Dc-OOU"/>
+                    <connections>
+                        <outlet property="picture" destination="UwE-An-kSA" id="oaw-fG-ZXv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3r5-Xm-bmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,6 +245,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SellViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addOrTakePic:"/>
+                <relationship kind="outlet" name="description" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="titleItem" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
