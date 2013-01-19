@@ -66,9 +66,14 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     WebServices *webServices = [WebServices sharedInstance];
     [webServices retrieveSellerUserData:selectedItem.posterId];
      sellingUser = [[User alloc]init];
-     [sellingUser setName:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"username"]];
+     [sellingUser setFirstname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"first_name"]];
+     [sellingUser setLastname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"last_name"]];
+    [sellingUser setLastname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"last_name"]];
+    //venmoId, firstname, lastname, isBuyer, isVerified,profilePic
+//      [sellingUser setIsBuyer:[]
+
 }
-     
+
 
 
 - (void)didReceiveMemoryWarning
