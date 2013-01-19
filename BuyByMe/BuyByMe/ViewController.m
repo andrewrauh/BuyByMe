@@ -44,7 +44,7 @@
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"Location: %@", [newLocation description]);
+ //   NSLog(@"Location: %@", [newLocation description]);
     userLocation = newLocation;
 }
 
@@ -77,7 +77,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
-//    NSLog(@"CFR: All items are %@", webServices.allItems);
+    NSLog(@"CFR: All items are %@", webServices.allItems);
+    NSLog(@"CFR: Title is %@", [[webServices.allItems objectAtIndex:indexPath.row]title]);
     [cell.textLabel setText:[[webServices.allItems objectAtIndex:indexPath.row]title]];
     [cell.detailTextLabel setText:@""];
     return cell;
@@ -94,7 +95,7 @@
 }
 
 - (void) reloadTableView{
-    [tbView reloadData];
+    [tbView performSelectorOnMainThread:@selector(reloadData) withObject:self waitUntilDone:YES];
 }
 
 

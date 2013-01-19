@@ -11,9 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 typedef enum{
-    kCategory1,
-    kCategeory2,
-    kCategory3
+    kTechnology
 }Category;
 
 @interface Item : NSObject{
@@ -28,22 +26,26 @@ typedef enum{
     bool            isNegotiable;
     NSString        *template_id;
     User            *poster;
+    NSString        *posterId;
     NSDate          *posted_date;
     NSDate          *end_date;
     UIImage         *picture;
     
 }
 
-@property(nonatomic,retain) NSString *title;
-@property(nonatomic,retain) NSString *description;
-@property(nonatomic,retain) NSString *category;
-@property(nonatomic,retain) CLLocation *originalLocation;
+@property(nonatomic, strong) NSString *title;
+@property(nonatomic, strong) NSString *description;
+@property(nonatomic, strong ) NSString *category;
+@property(nonatomic, strong) CLLocation *originalLocation;
 @property(nonatomic) Category cat;
 @property(nonatomic) bool isNegotiable;
-@property(nonatomic,retain) NSNumber *price;
-@property(nonatomic,retain) User *poster;
-@property(nonatomic,retain) NSDate *posted_date;
-@property(nonatomic,retain) NSDate *end_date;
-@property(nonatomic, retain)UIImage *picture;
+@property(nonatomic, strong) NSNumber *price;
+@property(nonatomic, strong) User *poster;
+@property(nonatomic, strong) NSDate *posted_date;
+@property(nonatomic, strong) NSString *posterId;
+@property(nonatomic, strong) NSDate *end_date;
+@property(nonatomic, strong)UIImage *picture;
+
+-(void)convertStringToCategory:(NSString*)category_string;
 
 @end

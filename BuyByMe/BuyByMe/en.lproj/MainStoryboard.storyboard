@@ -124,7 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z24-M0-6RM"/>
                     <connections>
-                        <outlet property="tbView" destination="Y5i-dK-i7e" id="noa-zV-P3e"/>
+                        <outlet property="tbView" destination="Y5i-dK-i7e" id="khp-R1-h9D"/>
                         <segue destination="uU7-A7-qRL" kind="push" id="KsC-lt-coc"/>
                     </connections>
                 </viewController>

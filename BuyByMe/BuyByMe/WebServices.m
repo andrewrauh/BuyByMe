@@ -19,6 +19,7 @@
     return sharedInstance;
 }
 
+
 -(void)retrieveAllPostedItems {
     
     NSURLRequest *main = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://buybyme.herokuapp.com/api/api/api/item/"]]];
@@ -48,16 +49,28 @@
             NSArray *parsedArray = (NSArray *)parsedObject;
             
             for (NSDictionary *dict in parsedArray) {
+                NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
+                [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+                NSLog(@"Dict is %@", dict);
                 Item *newItem = [[Item alloc]init];
+                NSDictionary *poster = [dict objectForKey:@"poster"];
+                [newItem setTitle:[dict objectForKey:@"title"]];
+                NSString *priceString = [[dict objectForKey:@"price"] stringValue];
+                NSLog(@"price string %@", priceString);
+                NSNumber *price = [formatter numberFromString:priceString];
+                [newItem setPrice:price];
                 [newItem setTitle:[dict objectForKey:@"description"]];
+                [newItem setPosterId:[poster objectForKey:@"id"]];
+                [newItem convertStringToCategory:[dict objectForKey:@"category"]];
+                NSLog(@"item is %@",newItem);
                 [allItems addObject:newItem];
-//                [allItems addObject:[dict objectForKey:@"description"]];
-//                NSLog(@"AllItems is %@",allItems);
+                NSLog(@"AllItems is Chris %@",allItems);
                 [[self delegate] reloadTableView];
 
             }
         }
        
+        [[self delegate] reloadTableView];
     });
     
     NSLog(@"AllItems is %@",allItems);

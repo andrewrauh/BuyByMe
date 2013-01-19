@@ -9,6 +9,15 @@
 #import "Item.h"
 
 @implementation Item
-@synthesize title, description, category, cat, originalLocation, isNegotiable, price, poster, posted_date, end_date, picture;
+@synthesize title, description, category, cat, originalLocation, isNegotiable, price, poster, posted_date, end_date, picture, posterId;
+
+-(void)convertStringToCategory:(NSString*)category_string{
+    Category categor;
+    if([category_string caseInsensitiveCompare:@"technology"]){
+        cat = kTechnology;
+        categor = kTechnology;
+    }
+
+}
 
 @end
