@@ -13,6 +13,7 @@
 		AF29A47F16AA593200B9AE1F /* chris2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF29A47E16AA593200B9AE1F /* chris2.png */; };
 		AF29A48316AA5AD800B9AE1F /* CLController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A48216AA5AD800B9AE1F /* CLController.m */; };
 		AF29A48516AA5F8D00B9AE1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */; };
+		AF29A48716AA629400B9AE1F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A48616AA629400B9AE1F /* MobileCoreServices.framework */; };
 		F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */; };
 		F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C016AA3E1D004DD1E5 /* Foundation.framework */; };
 		F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C216AA3E1D004DD1E5 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 		AF29A48116AA5AD800B9AE1F /* CLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLController.h; sourceTree = "<group>"; };
 		AF29A48216AA5AD800B9AE1F /* CLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLController.m; sourceTree = "<group>"; };
 		AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF29A48616AA629400B9AE1F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F9F635BA16AA3E1D004DD1E5 /* BuyByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9F635C016AA3E1D004DD1E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF29A48716AA629400B9AE1F /* MobileCoreServices.framework in Frameworks */,
 				AF29A48516AA5F8D00B9AE1F /* CoreLocation.framework in Frameworks */,
 				F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */,
 				F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */,
@@ -85,6 +88,7 @@
 		F9F635AF16AA3E1D004DD1E5 = {
 			isa = PBXGroup;
 			children = (
+				AF29A48616AA629400B9AE1F /* MobileCoreServices.framework */,
 				AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */,
 				F9F635C416AA3E1D004DD1E5 /* BuyByMe */,
 				F9F635BD16AA3E1D004DD1E5 /* Frameworks */,
