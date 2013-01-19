@@ -51,6 +51,7 @@
     }
     [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
     [cell.textLabel setText:@"Chris Wendel"];
+    [cell.detailTextLabel setText:@"OH HEEYYYYY"];
     return cell;
 }
 
