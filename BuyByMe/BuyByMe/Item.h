@@ -28,6 +28,7 @@ typedef enum{
     User            *poster;
     NSDate          *posted_date;
     NSDate          *end_date;
+    UIImage         *picture;
     
 }
 
@@ -40,5 +41,6 @@ typedef enum{
 @property(nonatomic,retain) User *poster;
 @property(nonatomic,retain) NSDate *posted_date;
 @property(nonatomic,retain) NSDate *end_date;
+@property(nonatomic, retain)UIImage *picture;
 
 @end

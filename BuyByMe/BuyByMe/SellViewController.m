@@ -7,6 +7,7 @@
 //
 
 #import "SellViewController.h"
+#import "Item.h"
 
 @interface SellViewController () {
     BOOL newMedia;
@@ -108,7 +109,6 @@
 }
 
 
-
 - (void)image:(UIImage *)image
 finishedSavingWithError:(NSError *)error
   contextInfo:(void *)contextInfo {
@@ -121,5 +121,13 @@ finishedSavingWithError:(NSError *)error
                               otherButtonTitles:nil];
         [alert show];
     }
+}
+
+-(IBAction)didPressDone:(id)sender {
+    Item *newItem = [[Item alloc]init];
+    [newItem setTitle:titleItem.text];
+    [newItem setDescription:description.text];
+    [newItem setPrice:[NSNumber numberWithInt:[price.text integerValue]]];
+    [newItem setPicture:picture.image];
 }
 @end

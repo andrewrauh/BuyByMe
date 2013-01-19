@@ -9,6 +9,6 @@
 #import "Item.h"
 
 @implementation Item
-@synthesize title, description, category, cat, isNegotiable, price, poster, posted_date, end_date;
+@synthesize title, description, category, cat, isNegotiable, price, poster, posted_date, end_date, picture;
 
 @end
