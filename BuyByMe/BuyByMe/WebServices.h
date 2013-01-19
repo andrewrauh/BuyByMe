@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Item.h"
+#import "User.h"
 
-@interface WebServices : NSObject
+@interface WebServices : NSObject {
+    User *loggedInUser;
+}
+
+@property(nonatomic, strong) User *loggedInUser;
 
 -(void)retrieveAllPostedItems;
+-(void)retrieveAllUserData;
 -(void)sendNewItemToServer:(Item*)newItem;
 
 @end

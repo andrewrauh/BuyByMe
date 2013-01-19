@@ -9,6 +9,7 @@
 #import "WebServices.h"
 
 @implementation WebServices
+@synthesize loggedInUser;
 
 +(id)sharedInstance
 {
@@ -23,8 +24,27 @@
     
     
 }
+
+-(void)retrieveAllUserData {
+    
+}
+
+
 -(void)sendNewItemToServer:(Item*)newItem {
   
+    
+}
+
+- (NSData *) takeNewItemAndCreateJSON:(Item*)newItem
+{
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjectsAndKeys:newItem.description,@"description", newItem.price, @"price", newItem.title, @"title", nil];
+    
+    NSMutableData *jsonData = [[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:jsonData];
+    [archiver encodeObject:jsonDictionary forKey:@"item"];
+    
+    NSData *data = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+    return data;
 }
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U5n-z8-bad">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U5n-z8-bad">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -125,11 +125,83 @@
                     <navigationItem key="navigationItem" id="Z24-M0-6RM"/>
                     <connections>
                         <outlet property="tbView" destination="Y5i-dK-i7e" id="noa-zV-P3e"/>
+                        <segue destination="uU7-A7-qRL" kind="push" id="KsC-lt-coc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="390" y="-968"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="0Yf-hr-6Ju">
+            <objects>
+                <viewController storyboardIdentifier="InfoVC" id="uU7-A7-qRL" customClass="InfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ih2-SI-yir">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toj-tI-GfQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="Dzz-od-R3L"/>
+                                    <constraint firstAttribute="height" constant="212" id="mbi-hF-rxl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac5-tB-dDh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfv-a9-KG1">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Call Seller">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhQ-Qu-INe">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Buy Now">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ato-3U-dZn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Request More Info">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Toj-tI-GfQ" firstAttribute="leading" secondItem="Ac5-tB-dDh" secondAttribute="leading" type="default" id="1XW-2E-04B"/>
+                            <constraint firstAttribute="bottom" secondItem="ato-3U-dZn" secondAttribute="bottom" constant="52" id="ESA-fR-CMm"/>
+                            <constraint firstItem="wfv-a9-KG1" firstAttribute="centerX" secondItem="Ac5-tB-dDh" secondAttribute="centerX" type="default" id="JiZ-Eh-Ppe"/>
+                            <constraint firstItem="Toj-tI-GfQ" firstAttribute="top" secondItem="Ih2-SI-yir" secondAttribute="top" constant="20" symbolic="YES" type="default" id="NPd-cL-sUX"/>
+                            <constraint firstAttribute="bottom" secondItem="wfv-a9-KG1" secondAttribute="bottom" constant="160" id="Ofr-wj-XDe"/>
+                            <constraint firstItem="ato-3U-dZn" firstAttribute="centerX" secondItem="VhQ-Qu-INe" secondAttribute="centerX" type="default" id="duO-YF-5Wu"/>
+                            <constraint firstItem="Ac5-tB-dDh" firstAttribute="top" secondItem="Ih2-SI-yir" secondAttribute="top" constant="263" id="fYs-Ii-hEN"/>
+                            <constraint firstAttribute="bottom" secondItem="VhQ-Qu-INe" secondAttribute="bottom" constant="106" id="n9k-ch-LMq"/>
+                            <constraint firstItem="VhQ-Qu-INe" firstAttribute="centerX" secondItem="wfv-a9-KG1" secondAttribute="centerX" type="default" id="sxx-qW-uZr"/>
+                            <constraint firstItem="Ac5-tB-dDh" firstAttribute="trailing" secondItem="Toj-tI-GfQ" secondAttribute="trailing" type="default" id="w3Z-7C-7iD"/>
+                            <constraint firstItem="Toj-tI-GfQ" firstAttribute="leading" secondItem="Ih2-SI-yir" secondAttribute="leading" constant="57" id="xX7-iP-qsY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nhp-hY-x57"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vu5-hm-9Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="-968"/>
         </scene>
         <!--Sell View Controller-->
         <scene sceneID="ner-f9-aUg">
@@ -289,6 +361,9 @@
                 <relationship kind="action" name="didPressProfile:"/>
                 <relationship kind="action" name="didPressSell:"/>
             </relationships>
+        </class>
+        <class className="InfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
