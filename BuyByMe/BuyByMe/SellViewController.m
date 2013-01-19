@@ -8,7 +8,6 @@
 
 #import "SellViewController.h"
 #import "Item.h"
-#import <Venmo/Venmo.h>
 
 @interface SellViewController () {
     BOOL newMedia;
@@ -17,7 +16,7 @@
 @end
 
 @implementation SellViewController
-@synthesize titleItem,description,price,picture;
+@synthesize titleItem,description,price,picture, venmoClient;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

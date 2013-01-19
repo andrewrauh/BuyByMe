@@ -14,10 +14,11 @@
 @end
 
 @implementation ViewController
-@synthesize tbView, webServices;
+@synthesize tbView, userLocation, locationManager, webServices;
 
 - (void)viewDidLoad
 {
+    NSLog(@"ViewDidLoad");
     [super viewDidLoad];
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
@@ -25,12 +26,33 @@
     webServices.delegate =self;
     [webServices retrieveAllPostedItems];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager startUpdatingLocation];
+    locationManager.delegate = self;
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location: %@", [newLocation description]);
+    userLocation = newLocation;
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+	NSLog(@"Error: %@", [error description]);
 }
 
 //UITableViewMethods

@@ -7,10 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "WebServices.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate >
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate, CLLocationManagerDelegate > {
+    CLLocationManager       *locationManager;
+    CLLocation              *userLocation;
+    
+}
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic,strong)CLLocation *userLocation;
 @property (nonatomic, strong) IBOutlet UITableView *tbView;
 
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation;
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error;
 
 @end
