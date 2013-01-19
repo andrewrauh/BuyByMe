@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF29A43A16AA414300B9AE1F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A43916AA414300B9AE1F /* User.m */; };
+		AF29A43E16AA42FB00B9AE1F /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A43D16AA42FB00B9AE1F /* Item.m */; };
+		AF29A44116AA449A00B9AE1F /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A44016AA449A00B9AE1F /* Offer.m */; };
+		AF29A47F16AA593200B9AE1F /* chris2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF29A47E16AA593200B9AE1F /* chris2.png */; };
 		F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */; };
 		F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C016AA3E1D004DD1E5 /* Foundation.framework */; };
 		F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C216AA3E1D004DD1E5 /* CoreGraphics.framework */; };
@@ -18,7 +22,6 @@
 		F9F635D516AA3E1D004DD1E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F635D416AA3E1D004DD1E5 /* Default-568h@2x.png */; };
 		F9F635D816AA3E1D004DD1E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9F635D616AA3E1D004DD1E5 /* MainStoryboard.storyboard */; };
 		F9F635DB16AA3E1D004DD1E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635DA16AA3E1D004DD1E5 /* ViewController.m */; };
-		F9F635E416AA447B004DD1E5 /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F635E316AA447B004DD1E5 /* chris.png */; };
 		F9F635E716AA48F2004DD1E5 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635E616AA48F2004DD1E5 /* WebServices.m */; };
 		F9F635EE16AA4DFF004DD1E5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635ED16AA4DFF004DD1E5 /* FirstViewController.m */; };
 		F9F635F116AA5090004DD1E5 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635F016AA5090004DD1E5 /* SellViewController.m */; };
@@ -26,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF29A43816AA414300B9AE1F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AF29A43916AA414300B9AE1F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AF29A43C16AA42FB00B9AE1F /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		AF29A43D16AA42FB00B9AE1F /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		AF29A43F16AA449A00B9AE1F /* Offer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
+		AF29A44016AA449A00B9AE1F /* Offer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
+		AF29A47E16AA593200B9AE1F /* chris2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris2.png; sourceTree = "<group>"; };
 		F9F635BA16AA3E1D004DD1E5 /* BuyByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9F635C016AA3E1D004DD1E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,7 +52,6 @@
 		F9F635D716AA3E1D004DD1E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F9F635D916AA3E1D004DD1E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F9F635DA16AA3E1D004DD1E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F9F635E316AA447B004DD1E5 /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
 		F9F635E516AA48F2004DD1E5 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		F9F635E616AA48F2004DD1E5 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
 		F9F635EC16AA4DFF004DD1E5 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -97,8 +106,9 @@
 		F9F635C416AA3E1D004DD1E5 /* BuyByMe */ = {
 			isa = PBXGroup;
 			children = (
-				F9F635E316AA447B004DD1E5 /* chris.png */,
 				F9F635CD16AA3E1D004DD1E5 /* AppDelegate.h */,
+				AF29A43816AA414300B9AE1F /* User.h */,
+				AF29A43916AA414300B9AE1F /* User.m */,
 				F9F635CE16AA3E1D004DD1E5 /* AppDelegate.m */,
 				F9F635D616AA3E1D004DD1E5 /* MainStoryboard.storyboard */,
 				F9F635D916AA3E1D004DD1E5 /* ViewController.h */,
@@ -112,6 +122,10 @@
 				F9F635F016AA5090004DD1E5 /* SellViewController.m */,
 				F9F635F216AA50A0004DD1E5 /* ProfileViewController.h */,
 				F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */,
+				AF29A43C16AA42FB00B9AE1F /* Item.h */,
+				AF29A43D16AA42FB00B9AE1F /* Item.m */,
+				AF29A43F16AA449A00B9AE1F /* Offer.h */,
+				AF29A44016AA449A00B9AE1F /* Offer.m */,
 			);
 			path = BuyByMe;
 			sourceTree = "<group>";
@@ -119,6 +133,7 @@
 		F9F635C516AA3E1D004DD1E5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF29A47E16AA593200B9AE1F /* chris2.png */,
 				F9F635C616AA3E1D004DD1E5 /* BuyByMe-Info.plist */,
 				F9F635C716AA3E1D004DD1E5 /* InfoPlist.strings */,
 				F9F635CA16AA3E1D004DD1E5 /* main.m */,
@@ -186,7 +201,7 @@
 				F9F635D316AA3E1D004DD1E5 /* Default@2x.png in Resources */,
 				F9F635D516AA3E1D004DD1E5 /* Default-568h@2x.png in Resources */,
 				F9F635D816AA3E1D004DD1E5 /* MainStoryboard.storyboard in Resources */,
-				F9F635E416AA447B004DD1E5 /* chris.png in Resources */,
+				AF29A47F16AA593200B9AE1F /* chris2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +219,9 @@
 				F9F635EE16AA4DFF004DD1E5 /* FirstViewController.m in Sources */,
 				F9F635F116AA5090004DD1E5 /* SellViewController.m in Sources */,
 				F9F635F416AA50A1004DD1E5 /* ProfileViewController.m in Sources */,
+				AF29A43A16AA414300B9AE1F /* User.m in Sources */,
+				AF29A43E16AA42FB00B9AE1F /* Item.m in Sources */,
+				AF29A44116AA449A00B9AE1F /* Offer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +338,7 @@
 				F9F635E016AA3E1D004DD1E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
