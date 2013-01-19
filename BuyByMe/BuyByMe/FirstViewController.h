@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CLController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController{
+    
+    CLController *clController;
+    
+}
+
+@property(nonatomic,retain)CLController *clController;
 
 -(IBAction)didPressBuy:(id)sender;
 -(IBAction)didPressSell:(id)sender;

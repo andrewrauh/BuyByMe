@@ -13,6 +13,7 @@
 @end
 
 @implementation FirstViewController
+@synthesize clController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,8 +26,12 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"ViewDIdLoad on first view controller");
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    clController = [[CLController alloc] init];
+    [clController.locationManager startUpdatingLocation];
 }
 
 -(IBAction)didPressBuy:(id)sender {
