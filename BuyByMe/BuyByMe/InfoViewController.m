@@ -13,11 +13,12 @@ static NSString *const kVenmoAppId      = @"1220";
 static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 @interface InfoViewController ()
+@property (nonatomic, strong) User *sellingUser;
 
 @end
 
 @implementation InfoViewController
-@synthesize venmoClient,selectedItem;
+@synthesize venmoClient,selectedItem,sellingUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,7 +65,10 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 -(IBAction)pressBuy:(id)sender{
     WebServices *webServices = [WebServices sharedInstance];
     [webServices retrieveSellerUserData:selectedItem.posterId];
+     sellingUser = [[User alloc]init];
+     [sellingUser setName:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"username"]];
 }
+     
 
 
 - (void)didReceiveMemoryWarning
