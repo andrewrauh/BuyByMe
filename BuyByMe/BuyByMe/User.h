@@ -14,6 +14,7 @@
     NSString *name;
     bool isBuyer;
     bool isVerified;
+    UIImage *profilePic;
     
 }
 
@@ -21,5 +22,6 @@
 @property(nonatomic,retain) NSString *name;
 @property(nonatomic) bool isBuyer;
 @property(nonatomic) bool isVerified;
+@property(nonatomic, retain) UIImage *profilePic;
 
 @end
