@@ -12,7 +12,6 @@
 		AF29A44116AA449A00B9AE1F /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A44016AA449A00B9AE1F /* Offer.m */; };
 		AF29A47F16AA593200B9AE1F /* chris2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF29A47E16AA593200B9AE1F /* chris2.png */; };
 		AF29A48316AA5AD800B9AE1F /* CLController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A48216AA5AD800B9AE1F /* CLController.m */; };
-		AF29A48516AA5F8D00B9AE1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */; };
 		F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */; };
 		F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C016AA3E1D004DD1E5 /* Foundation.framework */; };
 		F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C216AA3E1D004DD1E5 /* CoreGraphics.framework */; };
@@ -30,6 +29,7 @@
 		F9F635F416AA50A1004DD1E5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */; };
 		F9F635FE16AA621F004DD1E5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635FD16AA621F004DD1E5 /* MobileCoreServices.framework */; };
 		F9F6360116AA6225004DD1E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F6360016AA6225004DD1E5 /* CoreLocation.framework */; };
+		F9F6360816AA808C004DD1E5 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6360716AA808C004DD1E5 /* InfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,6 @@
 		AF29A47E16AA593200B9AE1F /* chris2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris2.png; sourceTree = "<group>"; };
 		AF29A48116AA5AD800B9AE1F /* CLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLController.h; sourceTree = "<group>"; };
 		AF29A48216AA5AD800B9AE1F /* CLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLController.m; sourceTree = "<group>"; };
-		AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F9F635BA16AA3E1D004DD1E5 /* BuyByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9F635C016AA3E1D004DD1E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +68,8 @@
 		F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		F9F635FD16AA621F004DD1E5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F9F6360016AA6225004DD1E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F9F6360616AA808B004DD1E5 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		F9F6360716AA808C004DD1E5 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +142,8 @@
 				AF29A44016AA449A00B9AE1F /* Offer.m */,
 				AF29A48116AA5AD800B9AE1F /* CLController.h */,
 				AF29A48216AA5AD800B9AE1F /* CLController.m */,
+				F9F6360616AA808B004DD1E5 /* InfoViewController.h */,
+				F9F6360716AA808C004DD1E5 /* InfoViewController.m */,
 			);
 			path = BuyByMe;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				AF29A43E16AA42FB00B9AE1F /* Item.m in Sources */,
 				AF29A44116AA449A00B9AE1F /* Offer.m in Sources */,
 				AF29A48316AA5AD800B9AE1F /* CLController.m in Sources */,
+				F9F6360816AA808C004DD1E5 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
