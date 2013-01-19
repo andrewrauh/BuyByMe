@@ -8,6 +8,7 @@
 
 #import "SellViewController.h"
 #import "Item.h"
+#import <Venmo/Venmo.h>
 
 @interface SellViewController () {
     BOOL newMedia;
