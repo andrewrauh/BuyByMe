@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
+@property(nonatomic,retain) UIImageView *profileImage;
+@property(nonatomic, retain) UILabel *nameLabel;
 
+-(IBAction)pressedVenmoButton:(id)sender;
 @end

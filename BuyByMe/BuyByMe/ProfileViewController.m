@@ -34,5 +34,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(IBAction)pressedVenmoButton:(id)sender {
+    
+    //this would be where you would present the view for loose your "venginity"
+    
+}
 
 @end

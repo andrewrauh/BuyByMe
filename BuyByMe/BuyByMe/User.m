@@ -9,6 +9,6 @@
 #import "User.h"
 
 @implementation User
-@synthesize  venmoId, name, isBuyer, isVerified;
+@synthesize  venmoId, name, isBuyer, isVerified,profilePic;
 
 @end

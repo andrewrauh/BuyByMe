@@ -232,7 +232,44 @@
                     <view key="view" contentMode="scaleToFill" id="dpD-nf-Vs7">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chris2.png" translatesAutoresizingMaskIntoConstraints="NO" id="6ZC-qi-Dvp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="LjP-Q0-Rgb"/>
+                                    <constraint firstAttribute="width" constant="181" id="onb-IX-Lid"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Chris Wendel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txJ-pq-eFC">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="NQT-fJ-k5G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqp-dE-wvd">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="myVenmoAccount">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedVenmoButton:" destination="hag-pe-aoy" eventType="touchUpInside" id="8Mh-is-VtP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="txJ-pq-eFC" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" constant="20" symbolic="YES" type="default" id="7dM-Qx-J2U"/>
+                            <constraint firstItem="6ZC-qi-Dvp" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" type="default" id="IqJ-Ur-1v1"/>
+                            <constraint firstAttribute="trailing" secondItem="txJ-pq-eFC" secondAttribute="trailing" constant="5" id="K4W-er-gfg"/>
+                            <constraint firstItem="6ZC-qi-Dvp" firstAttribute="leading" secondItem="dpD-nf-Vs7" secondAttribute="leading" type="default" id="bfn-Ds-TIl"/>
+                            <constraint firstItem="uqp-dE-wvd" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" constant="244" id="fSA-5K-GW2"/>
+                            <constraint firstItem="uqp-dE-wvd" firstAttribute="centerX" secondItem="dpD-nf-Vs7" secondAttribute="centerX" type="default" id="jGk-YX-xte"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mTM-bj-U9B"/>
                 </viewController>
@@ -241,6 +278,9 @@
             <point key="canvasLocation" x="414" y="494"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chris2.png" width="225" height="179"/>
+    </resources>
     <classes>
         <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
@@ -255,11 +295,15 @@
         </class>
         <class className="ProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pressedVenmoButton:"/>
+            </relationships>
         </class>
         <class className="SellViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SellViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addOrTakePic:"/>
+                <relationship kind="action" name="didPressDone:"/>
                 <relationship kind="outlet" name="description" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="price" candidateClass="UITextField"/>

@@ -21,6 +21,11 @@
 
 -(void)retrieveAllPostedItems {
     
+    
 }
+-(void)sendNewItemToServer:(Item*)newItem {
+  
+}
+
 
 @end

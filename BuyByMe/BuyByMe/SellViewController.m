@@ -129,5 +129,6 @@ finishedSavingWithError:(NSError *)error
     [newItem setDescription:description.text];
     [newItem setPrice:[NSNumber numberWithInt:[price.text integerValue]]];
     [newItem setPicture:picture.image];
+    
 }
 @end

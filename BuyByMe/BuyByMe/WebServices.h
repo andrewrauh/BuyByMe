@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Item.h"
 
 @interface WebServices : NSObject
 
 -(void)retrieveAllPostedItems;
+-(void)sendNewItemToServer:(Item*)newItem;
 
 @end
