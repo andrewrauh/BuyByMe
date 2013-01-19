@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
+#import <Venmo/Venmo.h>
 
 
-@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>
+@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>{
+    
+    VenmoClient *venmoClient;
+    VenmoTransaction *venmoTransaction;
+    
+}
+
+@property (nonatomic, strong) VenmoClient *venmoClient;
 @property (nonatomic, strong) IBOutlet UITextField *titleItem;
 @property (nonatomic, strong) IBOutlet UITextView *description;
 @property (nonatomic, strong) IBOutlet UITextField *price;

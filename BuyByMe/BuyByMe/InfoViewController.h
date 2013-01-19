@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Venmo/Venmo.h>
 
-@interface InfoViewController : UIViewController
+@interface InfoViewController : UIViewController{
+    
+    VenmoClient                 *venmoClient;
+    VenmoTransaction            *venmoTransaction;
+    
+}
+
+@property (nonatomic, strong) VenmoClient *venmoClient;
 
 @end
