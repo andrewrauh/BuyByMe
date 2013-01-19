@@ -106,6 +106,7 @@
 		F9F635C416AA3E1D004DD1E5 /* BuyByMe */ = {
 			isa = PBXGroup;
 			children = (
+				F9F635E316AA447B004DD1E5 /* chris.png */,
 				F9F635CD16AA3E1D004DD1E5 /* AppDelegate.h */,
 				AF29A43816AA414300B9AE1F /* User.h */,
 				AF29A43916AA414300B9AE1F /* User.m */,
@@ -200,6 +201,7 @@
 				F9F635D316AA3E1D004DD1E5 /* Default@2x.png in Resources */,
 				F9F635D516AA3E1D004DD1E5 /* Default-568h@2x.png in Resources */,
 				F9F635D816AA3E1D004DD1E5 /* MainStoryboard.storyboard in Resources */,
+				F9F635E316AA447B004DD1E5 /* chris.png */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
