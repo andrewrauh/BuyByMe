@@ -20,6 +20,9 @@
 		F9F635DB16AA3E1D004DD1E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635DA16AA3E1D004DD1E5 /* ViewController.m */; };
 		F9F635E416AA447B004DD1E5 /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F635E316AA447B004DD1E5 /* chris.png */; };
 		F9F635E716AA48F2004DD1E5 /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635E616AA48F2004DD1E5 /* WebServices.m */; };
+		F9F635EE16AA4DFF004DD1E5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635ED16AA4DFF004DD1E5 /* FirstViewController.m */; };
+		F9F635F116AA5090004DD1E5 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635F016AA5090004DD1E5 /* SellViewController.m */; };
+		F9F635F416AA50A1004DD1E5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,12 @@
 		F9F635E316AA447B004DD1E5 /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
 		F9F635E516AA48F2004DD1E5 /* WebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
 		F9F635E616AA48F2004DD1E5 /* WebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
+		F9F635EC16AA4DFF004DD1E5 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		F9F635ED16AA4DFF004DD1E5 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		F9F635EF16AA5090004DD1E5 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
+		F9F635F016AA5090004DD1E5 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
+		F9F635F216AA50A0004DD1E5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +106,12 @@
 				F9F635C516AA3E1D004DD1E5 /* Supporting Files */,
 				F9F635E516AA48F2004DD1E5 /* WebServices.h */,
 				F9F635E616AA48F2004DD1E5 /* WebServices.m */,
+				F9F635EC16AA4DFF004DD1E5 /* FirstViewController.h */,
+				F9F635ED16AA4DFF004DD1E5 /* FirstViewController.m */,
+				F9F635EF16AA5090004DD1E5 /* SellViewController.h */,
+				F9F635F016AA5090004DD1E5 /* SellViewController.m */,
+				F9F635F216AA50A0004DD1E5 /* ProfileViewController.h */,
+				F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */,
 			);
 			path = BuyByMe;
 			sourceTree = "<group>";
@@ -186,6 +201,9 @@
 				F9F635CF16AA3E1D004DD1E5 /* AppDelegate.m in Sources */,
 				F9F635DB16AA3E1D004DD1E5 /* ViewController.m in Sources */,
 				F9F635E716AA48F2004DD1E5 /* WebServices.m in Sources */,
+				F9F635EE16AA4DFF004DD1E5 /* FirstViewController.m in Sources */,
+				F9F635F116AA5090004DD1E5 /* SellViewController.m in Sources */,
+				F9F635F416AA50A1004DD1E5 /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
