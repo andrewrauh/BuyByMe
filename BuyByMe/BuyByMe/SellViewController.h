@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/UTCoreTypes.h>
 
-@interface SellViewController : UIViewController
+
+@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>
+@property (nonatomic, strong) UITextField *titleItem;
+@property (nonatomic, strong) UITextView *description;
+@property (nonatomic, strong) NSString *price;
+@property (nonatomic, strong) UIImageView *picture;
+
+
+-(IBAction)addOrTakePic:(id)sender;
 
 @end

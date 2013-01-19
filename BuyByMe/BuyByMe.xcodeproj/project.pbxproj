@@ -26,6 +26,8 @@
 		F9F635EE16AA4DFF004DD1E5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635ED16AA4DFF004DD1E5 /* FirstViewController.m */; };
 		F9F635F116AA5090004DD1E5 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635F016AA5090004DD1E5 /* SellViewController.m */; };
 		F9F635F416AA50A1004DD1E5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */; };
+		F9F635FE16AA621F004DD1E5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635FD16AA621F004DD1E5 /* MobileCoreServices.framework */; };
+		F9F6360116AA6225004DD1E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F6360016AA6225004DD1E5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		F9F635F016AA5090004DD1E5 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
 		F9F635F216AA50A0004DD1E5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		F9F635F316AA50A0004DD1E5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		F9F635FD16AA621F004DD1E5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F9F6360016AA6225004DD1E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F6360116AA6225004DD1E5 /* CoreLocation.framework in Frameworks */,
+				F9F635FE16AA621F004DD1E5 /* MobileCoreServices.framework in Frameworks */,
 				F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */,
 				F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */,
 				F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +85,8 @@
 		F9F635AF16AA3E1D004DD1E5 = {
 			isa = PBXGroup;
 			children = (
+				F9F6360016AA6225004DD1E5 /* CoreLocation.framework */,
+				F9F635FD16AA621F004DD1E5 /* MobileCoreServices.framework */,
 				F9F635C416AA3E1D004DD1E5 /* BuyByMe */,
 				F9F635BD16AA3E1D004DD1E5 /* Frameworks */,
 				F9F635BB16AA3E1D004DD1E5 /* Products */,
