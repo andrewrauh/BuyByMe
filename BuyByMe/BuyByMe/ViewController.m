@@ -13,13 +13,13 @@
 @end
 
 @implementation ViewController
-@synthesize tableView;
+@synthesize tbView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    self.tbView.delegate = self;
+    self.tbView.dataSource = self;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
