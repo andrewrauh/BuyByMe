@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "InfoViewController.h"
 
 @interface ViewController ()
 
@@ -60,6 +61,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    InfoViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"InfoVC"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 

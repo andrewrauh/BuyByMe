@@ -125,6 +125,7 @@
                     <navigationItem key="navigationItem" id="Z24-M0-6RM"/>
                     <connections>
                         <outlet property="tbView" destination="Y5i-dK-i7e" id="noa-zV-P3e"/>
+                        <segue destination="uU7-A7-qRL" kind="push" id="KsC-lt-coc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -134,9 +135,9 @@
         <!--Info View Controller-->
         <scene sceneID="0Yf-hr-6Ju">
             <objects>
-                <viewController id="uU7-A7-qRL" customClass="InfoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoVC" id="uU7-A7-qRL" customClass="InfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ih2-SI-yir">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Toj-tI-GfQ">
@@ -196,6 +197,7 @@
                             <constraint firstItem="Toj-tI-GfQ" firstAttribute="leading" secondItem="Ih2-SI-yir" secondAttribute="leading" constant="57" id="xX7-iP-qsY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nhp-hY-x57"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vu5-hm-9Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
