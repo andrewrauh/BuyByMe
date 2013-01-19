@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Venmo/Venmo.h>
+#import "Item.h"
 
 @interface InfoViewController : UIViewController{
     
@@ -17,6 +18,7 @@
 }
 
 @property (nonatomic, strong) VenmoClient *venmoClient;
+@property (nonatomic, strong)  Item *selectedItem;
 
 -(IBAction)pressBuy:(id)sender;
 

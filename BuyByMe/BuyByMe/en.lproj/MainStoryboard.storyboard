@@ -170,6 +170,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressBuy:" destination="uU7-A7-qRL" eventType="touchUpInside" id="0Km-Iz-XkH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ato-3U-dZn">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>

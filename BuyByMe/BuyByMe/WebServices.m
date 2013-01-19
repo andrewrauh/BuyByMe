@@ -112,9 +112,9 @@
                                                              error:&parseError];
         }
         
-        if ([parsedObject isKindOfClass:[NSDictionary class]]) {
-            NSDictionary *parsedDict = (NSDictionary *)parsedObject;
-            sellingUser = [NSMutableDictionary dictionaryWithDictionary:parsedDict];
+        if ([parsedObject isKindOfClass:[NSArray class]]) {
+            NSArray *parsedArray = (NSArray *)parsedObject;
+            sellingUser = [NSMutableDictionary dictionaryWithDictionary:[parsedArray objectAtIndex:0]];
         }
     });
 }

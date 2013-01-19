@@ -91,6 +91,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     InfoViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"InfoVC"];
+    [controller setSelectedItem:[webServices.allItems objectAtIndex:indexPath.row]];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

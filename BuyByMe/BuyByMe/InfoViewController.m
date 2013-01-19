@@ -17,7 +17,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 @end
 
 @implementation InfoViewController
-@synthesize venmoClient;
+@synthesize venmoClient,selectedItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -63,8 +63,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 -(IBAction)pressBuy:(id)sender{
     WebServices *webServices = [WebServices sharedInstance];
-    //[webServices retrieveSellerUserData:item.postedID];
-    
+    [webServices retrieveSellerUserData:selectedItem.posterId];
 }
 
 
