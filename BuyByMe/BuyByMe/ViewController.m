@@ -10,17 +10,20 @@
 #import "InfoViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) WebServices *webServices;
 @end
 
 @implementation ViewController
-@synthesize tbView;
+@synthesize tbView, webServices;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.tbView.delegate = self;
     self.tbView.dataSource = self;
+    webServices = [WebServices sharedInstance];
+    webServices.delegate =self;
+    [webServices retrieveAllPostedItems];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -38,8 +41,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"Number of rows called");
     // Return the number of rows in the section.
-    return 10;
+    return [webServices.allItems count];
 }
 
 // Customize the appearance of table view cells.
@@ -51,8 +55,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
-    [cell.textLabel setText:@"Chris Wendel"];
-    [cell.detailTextLabel setText:@"OH HEEYYYYY"];
+//    NSLog(@"CFR: All items are %@", webServices.allItems);
+    [cell.textLabel setText:[[webServices.allItems objectAtIndex:indexPath.row]title]];
+    [cell.detailTextLabel setText:@""];
     return cell;
 }
 
@@ -66,6 +71,9 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (void) reloadTableView{
+    [tbView reloadData];
+}
 
 
 @end

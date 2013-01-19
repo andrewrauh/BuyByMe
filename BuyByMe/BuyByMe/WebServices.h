@@ -10,12 +10,28 @@
 #import "Item.h"
 #import "User.h"
 
+
+@protocol ProcessDataDelegate <NSObject>
+@required
+
+- (void) reloadTableView;
+
+@end
+
+
 @interface WebServices : NSObject {
     User *loggedInUser;
+    NSMutableArray *allItems;
+    id <ProcessDataDelegate> delegate;
+
 }
 
 @property(nonatomic, strong) User *loggedInUser;
+@property (nonatomic, strong) NSMutableArray *allItems;
+@property (strong, nonatomic) id delegate;
 
+
++(id)sharedInstance;
 -(void)retrieveAllPostedItems;
 -(void)retrieveAllUserData;
 -(void)sendNewItemToServer:(Item*)newItem;

@@ -9,8 +9,7 @@
 #import "WebServices.h"
 
 @implementation WebServices
-@synthesize loggedInUser;
-
+@synthesize loggedInUser, allItems, delegate;
 +(id)sharedInstance
 {
     static id sharedInstance = nil;
@@ -22,7 +21,47 @@
 
 -(void)retrieveAllPostedItems {
     
+    NSURLRequest *main = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://buybyme.herokuapp.com/api/api/api/item/"]]];
     
+    allItems = [[NSMutableArray alloc]init];
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        NSData *data = [NSURLConnection sendSynchronousRequest:main
+                                             returningResponse:&response
+                                                         error:&error];
+        
+        NSString *json = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        
+        id parsedObject = nil;
+        NSError *parseError = nil;
+        
+        if (json != nil && [json isKindOfClass:[NSString class]] && [json length] > 0) {
+            parsedObject = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSASCIIStringEncoding]
+                                                           options:0
+                                                             error:&parseError];
+        }
+        
+        if ([parsedObject isKindOfClass:[NSArray class]]) {
+            NSArray *parsedArray = (NSArray *)parsedObject;
+            
+            for (NSDictionary *dict in parsedArray) {
+                Item *newItem = [[Item alloc]init];
+                [newItem setTitle:[dict objectForKey:@"description"]];
+                [allItems addObject:newItem];
+//                [allItems addObject:[dict objectForKey:@"description"]];
+//                NSLog(@"AllItems is %@",allItems);
+                [[self delegate] reloadTableView];
+
+            }
+        }
+       
+    });
+    
+    NSLog(@"AllItems is %@",allItems);
+        
 }
 
 -(void)retrieveAllUserData {

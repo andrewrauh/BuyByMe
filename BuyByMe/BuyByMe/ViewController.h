@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebServices.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate >
 @property (nonatomic, strong) IBOutlet UITableView *tbView;
 
 
