@@ -43,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [price setTextColor:[UIColor whiteColor]];
 	// Do any additional setup after loading the view.
 }
 

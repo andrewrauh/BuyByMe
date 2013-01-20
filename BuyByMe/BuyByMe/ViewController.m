@@ -1,4 +1,4 @@
-//
+    //
 //  ViewController.m
 //  BuyByMe
 //
@@ -129,6 +129,11 @@
     if (tableView == self.searchDisplayController.searchResultsTableView) 
         [self performSegueWithIdentifier:@"itemDetail" sender:tableView];
     else{
+        NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
+        PFObject *itemObject = [items objectAtIndex:indexPath.row];
+        NSString *itemId = itemObject.objectId;
+        [controller setItemId:itemId];
+
         [self.navigationController pushViewController:controller animated:YES];
     }
 }
@@ -172,17 +177,10 @@
     if ([[segue identifier] isEqualToString:@"itemDetail"]) {
         InfoViewController *itemDetailViewController = [segue destinationViewController];
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
-        if(sender == self.searchDisplayController.searchResultsTableView) {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-           // NSString *destinationTitle = [[filteredItemArray objectAtIndex:[indexPath row]] name];
-            //[itemDetailViewController setTitle:destinationTitle];
-        }
-        else {
-            NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
-            NSString *destinationTitle = [[items objectAtIndex:[indexPath row]] name];
-            [itemDetailViewController setTitle:destinationTitle];
-        }
-        
+        PFObject *itemObject = [filteredItemArray objectAtIndex:indexPath.row];
+        NSString *itemId = itemObject.objectId;
+        [itemDetailViewController setItemId:itemId];
     }
 }
 

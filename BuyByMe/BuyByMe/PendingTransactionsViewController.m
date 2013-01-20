@@ -15,7 +15,7 @@
 @end
 
 @implementation PendingTransactionsViewController
-@synthesize mytableView, pendingTransactions;
+@synthesize mytableView, pendingTransactions, transactionHeaderLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,11 +33,15 @@
     self.mytableView.dataSource = self;
     pendingTransactions = [[NSArray alloc] init];
     PFQuery *transactionQuery = [PFQuery queryWithClassName:@"Transaction"];
-    [transactionQuery whereKey:@"seller" equalTo:[PFUser currentUser]];
+    NSLog(@"user id is %@", [PFUser currentUser].objectId);
+    [transactionQuery whereKey:@"buyer" equalTo:[PFUser currentUser]];
     #warning Add buyer match too
     
-     pendingTransactions = [NSArray arrayWithArray:[transactionQuery findObjects]];
-	// Do any additional setup after loading the view.
+    pendingTransactions = [transactionQuery findObjects];
+    NSLog(@"Pending transactions is %@", pendingTransactions);
+    [transactionHeaderLabel setText:[NSString stringWithFormat:@"You have %d Pending Transactions", [pendingTransactions count]]];
+    [mytableView reloadData];
+    // Do any additional setup after loading the view.
 }
 -(void)viewDidAppear:(BOOL)animated {
 }
@@ -59,7 +63,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"Number of rows called");
     // Return the number of rows in the section.
-    return 9;
+    return [pendingTransactions count];
 }
 
 // Customize the appearance of table view cells.
@@ -72,7 +76,7 @@
     }
     [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
     PFObject *curObj = pendingTransactions[indexPath.row];
-    [cell.detailTextLabel setText:[[curObj objectForKey:@"item"] objectForKey:@"title"]];
+    [cell.detailTextLabel setText:[curObj objectForKey:@"title"]];
     return cell;
 }
 

@@ -1,3 +1,4 @@
+
 //
 //  InfoViewController.m
 //  BuyByMe
@@ -20,7 +21,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 @end
 
 @implementation InfoViewController
-@synthesize selectedItem, userLocation, sellingUser;
+@synthesize selectedItem, userLocation, sellingUser, itemId, item, titleL, pic, descript, priceL;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +35,10 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"";
+    PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+    //    NSLog(@"Item id is %@", itemId);
+     item = [query getObjectWithId:itemId];
 	// Do any additional setup after loading the view.
     // Do any additional setup after loading the view, typically from a nib.
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
@@ -45,15 +50,24 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     venmoTransaction.note = @"hello world";
     venmoTransaction.toUserHandle = @"mattdipasquale";
     
+//    
+//     CGRect buttonRect = CGRectMake(40.0f, 20.0f, 90.0f, 40.0f);
+//     UIButton *venmoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//     venmoButton.frame = buttonRect;
+//     [venmoButton setTitle:@"Venmo" forState:UIControlStateNormal];
+//     [venmoButton addTarget:self action:@selector(openVenmoAction)
+//     forControlEvents:UIControlEventTouchUpInside];
+//     [self.view addSubview:venmoButton];
     
-     CGRect buttonRect = CGRectMake(40.0f, 20.0f, 90.0f, 40.0f);
-     UIButton *venmoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-     venmoButton.frame = buttonRect;
-     [venmoButton setTitle:@"Venmo" forState:UIControlStateNormal];
-     [venmoButton addTarget:self action:@selector(openVenmoAction)
-     forControlEvents:UIControlEventTouchUpInside];
-     [self.view addSubview:venmoButton];
-     
+    [titleL setText:[item objectForKey:@"title"]];
+    PFFile *imageFile = [item objectForKey:@"image"];
+    NSData *imageData = [imageFile getData];
+    UIImage *pict = [[UIImage alloc]initWithData:imageData];
+    [pic setImage:pict];
+    [descript setText:[item objectForKey:@"description"]];
+    [priceL setText:[NSString stringWithFormat:@"$ %@", [item objectForKey:@"price"]]];
+//    [pic setImage:[item objectForKey:@"image"]];
+    
 }
 
 - (void)openVenmoAction {
@@ -68,7 +82,10 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 -(IBAction)pressBuy:(id)sender{
     // set Item to inactive
-    PFObject *item = [PFObject objectWithClassName:@"Item"];
+    //PFObject *item = [PFObject objectWithClassName:@"Item"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+//    NSLog(@"Item id is %@", itemId);
+    PFObject *item = [query getObjectWithId:itemId];
     [item setObject:[NSNumber numberWithBool:NO] forKey:@"active"];
     [item saveInBackground];
     
@@ -76,11 +93,12 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     PFObject *newTransaction = [PFObject objectWithClassName:@"Transaction"];
     
     
-    [newTransaction setObject:[Item valueForKey:@"poster"] forKey:@"seller"];
+    [newTransaction setObject:[item objectForKey:@"poster"] forKey:@"seller"];
     [newTransaction setObject:[PFUser currentUser] forKey:@"buyer"];
     [newTransaction setObject:item forKey:@"item"];
-    [newTransaction setObject:[NSNumber numberWithBool:NO] forKey:@"pending"];
-    [newTransaction setObject:[item valueForKey:@"price"] forKey:@"price"];
+    [newTransaction setObject:[item objectForKey:@"title"] forKey:@"title"];
+    [newTransaction setObject:[NSNumber numberWithBool:YES] forKey:@"pending"];
+    [newTransaction setObject:[item objectForKey:@"price"] forKey:@"price"];
     [newTransaction saveInBackground];
 }
 
