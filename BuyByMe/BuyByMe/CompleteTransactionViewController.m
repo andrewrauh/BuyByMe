@@ -13,6 +13,7 @@
 @end
 
 @implementation CompleteTransactionViewController
+@synthesize pic, titleLabel, description, priceLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
