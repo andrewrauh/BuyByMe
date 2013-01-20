@@ -8,6 +8,7 @@
 
 #import "SellViewController.h"
 #import "Item.h"
+#import <Parse/Parse.h>
 
 @interface SellViewController () {
     BOOL newMedia;
@@ -129,6 +130,23 @@ finishedSavingWithError:(NSError *)error
     [newItem setDescription:description.text];
     [newItem setPrice:[NSNumber numberWithInt:[price.text integerValue]]];
     [newItem setPicture:picture.image];
+    
+    // Create the Item
+    PFObject *myItem = [PFObject objectWithClassName:@"Item"];
+    [myItem setObject:newItem.title forKey:@"title"];
+    [myItem setObject:newItem.description forKey:@"description"];
+    [myItem setObject:[NSNumber numberWithInt:[price.text integerValue]] forKey:@"price"];
+    
+    NSData *imageData = UIImagePNGRepresentation(picture.image);
+    PFFile *imageFile = [PFFile fileWithName:@"User picture" data:imageData];
+    [imageFile save];
+    
+    [myItem setObject:imageFile forKey:@"image"];
+    
+    // This will save both myPost and myComment
+    [myItem saveInBackground];
+    
+    
     
 }
 @end
