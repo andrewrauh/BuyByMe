@@ -17,6 +17,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 @end
 
 @implementation CompleteTransactionViewController
+@synthesize pic, titleLabel, description, priceLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

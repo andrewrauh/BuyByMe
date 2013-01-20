@@ -43,7 +43,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [price setTextColor:[UIColor whiteColor]];
     price.delegate = self;
     titleItem.delegate = self;
     
@@ -172,7 +171,7 @@ finishedSavingWithError:(NSError *)error
     
     PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:userLocation.coordinate.latitude longitude:userLocation.coordinate.longitude];
     
-    CGSize halfSize = CGSizeMake(picture.image.size.width*0.5, picture.image.size.height*0.5);
+    CGSize halfSize = CGSizeMake(picture.image.size.width*0.03, picture.image.size.height*0.03);
     
     UIImage *newImage = [self imageWithImage:picture.image scaledToSize:halfSize];
     picture.image = newImage;
