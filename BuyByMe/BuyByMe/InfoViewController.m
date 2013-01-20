@@ -34,6 +34,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"";
 	// Do any additional setup after loading the view.
     // Do any additional setup after loading the view, typically from a nib.
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
