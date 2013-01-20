@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PendingTransactionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, retain) NSArray *pendingTransactions;
 @property (nonatomic, retain) IBOutlet UITableView *mytableView;
 @end

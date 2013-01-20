@@ -8,13 +8,14 @@
 
 #import "PendingTransactionsViewController.h"
 #import "CompleteTransactionViewController.h"
+#import <Parse/Parse.h>
 
 @interface PendingTransactionsViewController ()
 
 @end
 
 @implementation PendingTransactionsViewController
-@synthesize mytableView;
+@synthesize mytableView, pendingTransactions;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +31,12 @@
     [super viewDidLoad];
     self.mytableView.delegate = self;
     self.mytableView.dataSource = self;
-
+    pendingTransactions = [[NSArray alloc] init];
+    PFQuery *transactionQuery = [PFQuery queryWithClassName:@"Transaction"];
+    [transactionQuery whereKey:@"seller" equalTo:[PFUser currentUser]];
+    #warning Add buyer match too
+    
+     pendingTransactions = [NSArray arrayWithArray:[transactionQuery findObjects]];
 	// Do any additional setup after loading the view.
 }
 -(void)viewDidAppear:(BOOL)animated {
@@ -65,7 +71,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
-    [cell.detailTextLabel setText:@""];
+    PFObject *curObj = pendingTransactions[indexPath.row];
+    [cell.detailTextLabel setText:[[curObj objectForKey:@"item"] objectForKey:@"title"]];
     return cell;
 }
 
