@@ -45,6 +45,14 @@
 		F9F6361B16AB0B60004DD1E5 /* libVenmo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A4D716AB056600B9AE1F /* libVenmo.a */; };
 		F9F6361E16AB63AC004DD1E5 /* PendingTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6361D16AB63AC004DD1E5 /* PendingTransactionsViewController.m */; };
 		F9F6362116AB69AF004DD1E5 /* CompleteTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6362016AB69AF004DD1E5 /* CompleteTransactionViewController.m */; };
+		F9F6363716AB7E73004DD1E5 /* account_button_reg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6362F16AB7E72004DD1E5 /* account_button_reg.png */; };
+		F9F6363816AB7E73004DD1E5 /* deals_button_reg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363016AB7E72004DD1E5 /* deals_button_reg.png */; };
+		F9F6363916AB7E73004DD1E5 /* list_button_reg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363116AB7E72004DD1E5 /* list_button_reg.png */; };
+		F9F6363A16AB7E73004DD1E5 /* explore_button_reg.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363216AB7E72004DD1E5 /* explore_button_reg.png */; };
+		F9F6363B16AB7E73004DD1E5 /* black_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363316AB7E72004DD1E5 /* black_bar.png */; };
+		F9F6363C16AB7E73004DD1E5 /* top_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363416AB7E72004DD1E5 /* top_bar@2x.png */; };
+		F9F6363D16AB7E73004DD1E5 /* background-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363516AB7E72004DD1E5 /* background-568h@2x.jpg */; };
+		F9F6363E16AB7E73004DD1E5 /* Novecentowide-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = F9F6363616AB7E73004DD1E5 /* Novecentowide-Book.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +194,14 @@
 		F9F6361D16AB63AC004DD1E5 /* PendingTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsViewController.m; sourceTree = "<group>"; };
 		F9F6361F16AB69AE004DD1E5 /* CompleteTransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteTransactionViewController.h; sourceTree = "<group>"; };
 		F9F6362016AB69AF004DD1E5 /* CompleteTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteTransactionViewController.m; sourceTree = "<group>"; };
+		F9F6362F16AB7E72004DD1E5 /* account_button_reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account_button_reg.png; sourceTree = "<group>"; };
+		F9F6363016AB7E72004DD1E5 /* deals_button_reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deals_button_reg.png; sourceTree = "<group>"; };
+		F9F6363116AB7E72004DD1E5 /* list_button_reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_button_reg.png; sourceTree = "<group>"; };
+		F9F6363216AB7E72004DD1E5 /* explore_button_reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explore_button_reg.png; sourceTree = "<group>"; };
+		F9F6363316AB7E72004DD1E5 /* black_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_bar.png; sourceTree = "<group>"; };
+		F9F6363416AB7E72004DD1E5 /* top_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar@2x.png"; sourceTree = "<group>"; };
+		F9F6363516AB7E72004DD1E5 /* background-568h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-568h@2x.jpg"; sourceTree = "<group>"; };
+		F9F6363616AB7E73004DD1E5 /* Novecentowide-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Novecentowide-Book.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +440,14 @@
 		F9F635C416AA3E1D004DD1E5 /* BuyByMe */ = {
 			isa = PBXGroup;
 			children = (
+				F9F6362F16AB7E72004DD1E5 /* account_button_reg.png */,
+				F9F6363016AB7E72004DD1E5 /* deals_button_reg.png */,
+				F9F6363116AB7E72004DD1E5 /* list_button_reg.png */,
+				F9F6363216AB7E72004DD1E5 /* explore_button_reg.png */,
+				F9F6363316AB7E72004DD1E5 /* black_bar.png */,
+				F9F6363416AB7E72004DD1E5 /* top_bar@2x.png */,
+				F9F6363516AB7E72004DD1E5 /* background-568h@2x.jpg */,
+				F9F6363616AB7E73004DD1E5 /* Novecentowide-Book.otf */,
 				F9F635CD16AA3E1D004DD1E5 /* AppDelegate.h */,
 				F9F635CE16AA3E1D004DD1E5 /* AppDelegate.m */,
 				AF29A43816AA414300B9AE1F /* User.h */,
@@ -559,6 +583,14 @@
 				F9F635D516AA3E1D004DD1E5 /* Default-568h@2x.png in Resources */,
 				F9F635D816AA3E1D004DD1E5 /* MainStoryboard.storyboard in Resources */,
 				AF29A47F16AA593200B9AE1F /* chris2.png in Resources */,
+				F9F6363716AB7E73004DD1E5 /* account_button_reg.png in Resources */,
+				F9F6363816AB7E73004DD1E5 /* deals_button_reg.png in Resources */,
+				F9F6363916AB7E73004DD1E5 /* list_button_reg.png in Resources */,
+				F9F6363A16AB7E73004DD1E5 /* explore_button_reg.png in Resources */,
+				F9F6363B16AB7E73004DD1E5 /* black_bar.png in Resources */,
+				F9F6363C16AB7E73004DD1E5 /* top_bar@2x.png in Resources */,
+				F9F6363D16AB7E73004DD1E5 /* background-568h@2x.jpg in Resources */,
+				F9F6363E16AB7E73004DD1E5 /* Novecentowide-Book.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,12 +709,14 @@
 				GCC_PREFIX_HEADER = "BuyByMe/BuyByMe-Prefix.pch";
 				HEADER_SEARCH_PATHS = ../Libraries/Venmo;
 				INFOPLIST_FILE = "BuyByMe/BuyByMe-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-force_load",
 					"${BUILT_PRODUCTS_DIR}/libVenmo.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -698,12 +732,14 @@
 				GCC_PREFIX_HEADER = "BuyByMe/BuyByMe-Prefix.pch";
 				HEADER_SEARCH_PATHS = ../Libraries/Venmo;
 				INFOPLIST_FILE = "BuyByMe/BuyByMe-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-force_load",
 					"${BUILT_PRODUCTS_DIR}/libVenmo.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

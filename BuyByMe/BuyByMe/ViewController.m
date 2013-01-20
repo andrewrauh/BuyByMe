@@ -30,9 +30,11 @@
     locationManager = [[CLLocationManager alloc] init];
     [locationManager startUpdatingLocation];
     locationManager.delegate = self;
-
+    
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
