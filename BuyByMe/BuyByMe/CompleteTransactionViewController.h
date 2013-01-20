@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CompleteTransactionViewController : UIViewController
+#import <Venmo/Venmo.h>
+@interface CompleteTransactionViewController : UIViewController{
+    
+    VenmoTransaction            *venmoTransaction;
+    
+}
 
 @end
