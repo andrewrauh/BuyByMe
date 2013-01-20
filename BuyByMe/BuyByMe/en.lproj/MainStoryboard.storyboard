@@ -362,7 +362,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LKk-Dc-OOU">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="Gap-wT-TMd"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="Gap-wT-TMd">
+                            <connections>
+                                <action selector="didPressDone:" destination="uB8-gd-o8x" id="IqU-NZ-pN1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="description" destination="TSl-WB-n8a" id="6t0-0O-UA9"/>

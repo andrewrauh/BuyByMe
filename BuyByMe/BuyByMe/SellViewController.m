@@ -162,12 +162,14 @@ finishedSavingWithError:(NSError *)error
     
     
     // Create the Item
+    PFUser *currentUser = [PFUser currentUser];
     PFObject *myItem = [PFObject objectWithClassName:@"Item"];
     [myItem setObject:point forKey:@"location"];
     [myItem setObject:newItem.title forKey:@"title"];
     [myItem setObject:[NSNumber numberWithBool:YES] forKey:@"active"];
     [myItem setObject:[NSNumber numberWithBool:NO] forKey:@"negotiable"];
     [myItem setObject:newItem.description forKey:@"description"];
+    [myItem setObject:[PFUser currentUser] forKey:@"poster"];
     [myItem setObject:[NSNumber numberWithInt:[price.text integerValue]] forKey:@"price"];
     
     NSData *imageData = UIImagePNGRepresentation(picture.image);
@@ -178,6 +180,8 @@ finishedSavingWithError:(NSError *)error
     
     // This will save both myPost and myComment
     [myItem saveInBackground];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 
     
 }
