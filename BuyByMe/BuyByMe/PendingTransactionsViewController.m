@@ -74,9 +74,26 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
-    PFObject *curObj = pendingTransactions[indexPath.row];
-    [cell.detailTextLabel setText:[curObj objectForKey:@"title"]];
+    
+    
+    
+    PFObject *curTrans = pendingTransactions[indexPath.row];
+    
+    PFObject *curItem = [[curTrans objectForKey:@"item"] fetchIfNeeded];
+    
+    NSLog(@"Item object Id: %@" , curItem);
+
+    NSLog(@"Item object Id: %@" , [curItem objectForKey:@"title"]);
+    
+    PFFile *img = [curItem objectForKey:@"image"];
+    if (img) {
+        NSData *imgData = [img getData];
+        [cell.imageView setImage:[UIImage imageWithData:imgData]];
+    } else {
+        [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
+    }
+    
+    [cell.detailTextLabel setText:[curItem objectForKey:@"title"]];
     return cell;
 }
 

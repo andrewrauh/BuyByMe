@@ -44,6 +44,9 @@
 {
     [super viewDidLoad];
     [price setTextColor:[UIColor whiteColor]];
+    price.delegate = self;
+    titleItem.delegate = self;
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -196,5 +199,10 @@ finishedSavingWithError:(NSError *)error
     [self.navigationController popViewControllerAnimated:YES];
 
     
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

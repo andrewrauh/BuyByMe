@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U5n-z8-bad">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="U5n-z8-bad">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -328,23 +328,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ITEM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-cF-qPh">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rKE-GT-jKJ"/>
-                                    <constraint firstAttribute="width" constant="279" id="vKo-d8-eMk"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="250377_10151634532876038_924530081_n.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-An-kSA">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="lQu-RG-Mr6"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="black_title_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="gSD-Fm-dAQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="319" id="CE9-Wq-d3K"/>
+                                    <constraint firstAttribute="height" constant="44" id="des-J6-Wdr"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFb-Fa-wvn">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="ASJ-vG-cdi"/>
                                     <constraint firstAttribute="height" constant="180" id="HwQ-SP-r2h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -366,37 +362,41 @@
                                 <color key="textColor" red="0.91725593065693434" green="0.37120780109489043" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="black_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-9D-KW0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ITEM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-cF-qPh">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Jw7-H3-wuI"/>
+                                    <constraint firstAttribute="height" constant="30" id="rKE-GT-jKJ"/>
+                                    <constraint firstAttribute="width" constant="279" id="vKo-d8-eMk"/>
                                 </constraints>
-                            </imageView>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="TSl-WB-n8a" secondAttribute="bottom" constant="76" id="0lP-ng-hUA"/>
                             <constraint firstItem="uMt-6l-5ZG" firstAttribute="trailing" secondItem="hQL-EK-wjh" secondAttribute="trailing" type="default" id="2jK-Xz-7GK"/>
+                            <constraint firstItem="gSD-Fm-dAQ" firstAttribute="centerX" secondItem="kFb-Fa-wvn" secondAttribute="centerX" type="default" id="6WH-Cc-dQZ"/>
+                            <constraint firstItem="U87-Me-paa" firstAttribute="centerX" secondItem="TSl-WB-n8a" secondAttribute="centerX" type="default" id="8Xu-Jp-PHW"/>
                             <constraint firstItem="uMt-6l-5ZG" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" type="default" id="9Au-2Q-W7V"/>
                             <constraint firstItem="UwE-An-kSA" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" type="default" id="AMj-pg-415"/>
                             <constraint firstItem="UwE-An-kSA" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" type="default" id="DoG-cZ-of6"/>
+                            <constraint firstItem="0c1-Dd-D1W" firstAttribute="centerX" secondItem="gSD-Fm-dAQ" secondAttribute="centerX" type="default" id="Erz-Ko-4DV"/>
                             <constraint firstItem="0c1-Dd-D1W" firstAttribute="leading" secondItem="0KX-Ww-WnJ" secondAttribute="leading" type="default" id="HcN-NL-uSL"/>
                             <constraint firstItem="0c1-Dd-D1W" firstAttribute="trailing" secondItem="U87-Me-paa" secondAttribute="trailing" type="default" id="JqY-64-981"/>
-                            <constraint firstItem="Ctq-9D-KW0" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" type="default" id="RHw-Vw-k4G"/>
+                            <constraint firstItem="Ms8-cF-qPh" firstAttribute="centerY" secondItem="gSD-Fm-dAQ" secondAttribute="centerY" type="default" id="TfB-eg-ikk"/>
                             <constraint firstItem="0KX-Ww-WnJ" firstAttribute="leading" secondItem="U87-Me-paa" secondAttribute="leading" type="default" id="U3W-IW-JEj"/>
-                            <constraint firstItem="Ctq-9D-KW0" firstAttribute="trailing" secondItem="hQL-EK-wjh" secondAttribute="trailing" type="default" id="abF-1h-NQx"/>
                             <constraint firstItem="uMt-6l-5ZG" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" type="default" id="eI1-KI-enK"/>
-                            <constraint firstItem="kFb-Fa-wvn" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" constant="-1" id="ean-KR-DPD"/>
-                            <constraint firstItem="Ms8-cF-qPh" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" constant="9" id="ecu-V7-qUD"/>
-                            <constraint firstItem="Ms8-cF-qPh" firstAttribute="centerY" secondItem="Ctq-9D-KW0" secondAttribute="centerY" type="default" id="eha-4a-sa5"/>
                             <constraint firstAttribute="bottom" secondItem="0KX-Ww-WnJ" secondAttribute="bottom" constant="197" id="f7Z-c4-WbX"/>
-                            <constraint firstItem="TSl-WB-n8a" firstAttribute="centerX" secondItem="kFb-Fa-wvn" secondAttribute="centerX" type="default" id="nbe-FV-LZe"/>
+                            <constraint firstItem="gSD-Fm-dAQ" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="199" id="mFE-z4-9RE"/>
                             <constraint firstItem="UwE-An-kSA" firstAttribute="trailing" secondItem="hQL-EK-wjh" secondAttribute="trailing" type="default" id="p95-5U-Trv"/>
+                            <constraint firstItem="gSD-Fm-dAQ" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" type="default" id="poH-MN-Vs7"/>
                             <constraint firstItem="kFb-Fa-wvn" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" type="default" id="q9z-MZ-Qw6"/>
                             <constraint firstItem="uMt-6l-5ZG" firstAttribute="bottom" secondItem="hQL-EK-wjh" secondAttribute="bottom" type="default" id="s1m-6P-grF"/>
-                            <constraint firstItem="Ms8-cF-qPh" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="207" id="s6v-3r-f91"/>
+                            <constraint firstItem="Ms8-cF-qPh" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" constant="9" id="s4m-Wp-6pA"/>
                             <constraint firstItem="0c1-Dd-D1W" firstAttribute="bottom" secondItem="0KX-Ww-WnJ" secondAttribute="bottom" type="default" id="ueX-9x-nWy"/>
                             <constraint firstAttribute="bottom" secondItem="U87-Me-paa" secondAttribute="bottom" constant="191" id="vct-qh-hAJ"/>
-                            <constraint firstItem="0c1-Dd-D1W" firstAttribute="centerX" secondItem="Ctq-9D-KW0" secondAttribute="centerX" type="default" id="yFG-Ub-j1R"/>
+                            <constraint firstItem="gSD-Fm-dAQ" firstAttribute="trailing" secondItem="kFb-Fa-wvn" secondAttribute="trailing" type="default" id="xYS-oP-7S2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LKk-Dc-OOU">
@@ -409,8 +409,8 @@
                     <connections>
                         <outlet property="description" destination="TSl-WB-n8a" id="6t0-0O-UA9"/>
                         <outlet property="picture" destination="UwE-An-kSA" id="oaw-fG-ZXv"/>
-                        <outlet property="price" destination="Ms8-cF-qPh" id="YME-9E-Bue"/>
-                        <outlet property="titleItem" destination="0c1-Dd-D1W" id="tGU-jc-L6S"/>
+                        <outlet property="price" destination="0c1-Dd-D1W" id="Jxh-iv-iFj"/>
+                        <outlet property="titleItem" destination="Ms8-cF-qPh" id="F99-84-Rej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3r5-Xm-bmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -651,66 +651,6 @@
         <image name="sell_background.jpg" width="640" height="1136"/>
         <image name="venmo_button_reg.png" width="557" height="264"/>
     </resources>
-    <classes>
-        <class className="CompleteTransactionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CompleteTransactionViewController.h"/>
-        </class>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didPressBuy:"/>
-                <relationship kind="action" name="didPressProfile:"/>
-                <relationship kind="action" name="didPressSell:"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressBuy:"/>
-                <relationship kind="outlet" name="descript" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="pic" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceL" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleL" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PendingTransactionsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PendingTransactionsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mytableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="transactionHeaderLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrTakePic:"/>
-                <relationship kind="action" name="pressedVenmoButton:"/>
-                <relationship kind="outlet" name="profilePic" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="SellViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SellViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrTakePic:"/>
-                <relationship kind="action" name="didPressDone:"/>
-                <relationship kind="outlet" name="description" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="price" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleItem" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="itemSearchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="tbView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
