@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MobileCoreServices/UTCoreTypes.h>
 
-@interface ProfileViewController : UIViewController
+
+@interface ProfileViewController : UIViewController <UIActionSheetDelegate>
 @property(nonatomic,retain) UIImageView *profileImage;
 @property(nonatomic, retain) UILabel *nameLabel;
 
 -(IBAction)pressedVenmoButton:(id)sender;
+-(IBAction)addOrTakePic:(id)sender;
+
 @end

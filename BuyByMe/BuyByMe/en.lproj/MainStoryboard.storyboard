@@ -366,7 +366,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="profile_pic.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6ZC-qi-Dvp">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="9PD-x1-GQe"/>
-                                    <constraint firstAttribute="height" constant="117" id="eDj-Px-0NX"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqp-dE-wvd">
@@ -411,30 +410,53 @@
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjn-v0-SDf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="035-CJ-4l4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addOrTakePic:" destination="hag-pe-aoy" eventType="touchUpInside" id="IF4-WY-VEB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k0s-oQ-dFx" firstAttribute="trailing" secondItem="BGO-uy-i9W" secondAttribute="trailing" type="default" id="1LR-qb-pfu"/>
                             <constraint firstItem="IlD-zg-hWf" firstAttribute="bottom" secondItem="dpD-nf-Vs7" secondAttribute="bottom" type="default" id="27B-hY-PmD"/>
+                            <constraint firstItem="zGP-0w-WW3" firstAttribute="centerX" secondItem="cjn-v0-SDf" secondAttribute="centerX" type="default" id="C7E-mY-iYd"/>
                             <constraint firstItem="IlD-zg-hWf" firstAttribute="centerX" secondItem="zGP-0w-WW3" secondAttribute="centerX" type="default" id="EfS-8U-jWE"/>
                             <constraint firstItem="xI5-gi-ENu" firstAttribute="trailing" secondItem="zGP-0w-WW3" secondAttribute="trailing" type="default" id="J7E-A8-lRl"/>
-                            <constraint firstItem="6ZC-qi-Dvp" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" constant="24" id="T40-Gl-CIu"/>
                             <constraint firstItem="zGP-0w-WW3" firstAttribute="top" secondItem="BGO-uy-i9W" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VkU-4Y-7aS"/>
                             <constraint firstAttribute="bottom" secondItem="k0s-oQ-dFx" secondAttribute="bottom" constant="191" id="Xrd-Ij-dir"/>
                             <constraint firstItem="zGP-0w-WW3" firstAttribute="centerX" secondItem="k0s-oQ-dFx" secondAttribute="centerX" type="default" id="Z1E-OY-Dtk"/>
                             <constraint firstItem="IlD-zg-hWf" firstAttribute="trailing" secondItem="dpD-nf-Vs7" secondAttribute="trailing" type="default" id="ZZv-1U-QEU"/>
                             <constraint firstItem="IlD-zg-hWf" firstAttribute="leading" secondItem="dpD-nf-Vs7" secondAttribute="leading" type="default" id="ZoY-Pn-mVT"/>
                             <constraint firstItem="BGO-uy-i9W" firstAttribute="leading" secondItem="zGP-0w-WW3" secondAttribute="leading" type="default" id="bdZ-ch-wcw"/>
+                            <constraint firstItem="cjn-v0-SDf" firstAttribute="bottom" secondItem="6ZC-qi-Dvp" secondAttribute="bottom" type="default" id="c6r-I3-rAi"/>
+                            <constraint firstItem="cjn-v0-SDf" firstAttribute="trailing" secondItem="6ZC-qi-Dvp" secondAttribute="trailing" type="default" id="dXB-Fs-ytf"/>
+                            <constraint firstItem="cjn-v0-SDf" firstAttribute="top" secondItem="6ZC-qi-Dvp" secondAttribute="top" type="default" id="jKb-9f-DcN"/>
                             <constraint firstItem="xI5-gi-ENu" firstAttribute="leading" secondItem="k0s-oQ-dFx" secondAttribute="leading" type="default" id="lwv-cX-VXz"/>
+                            <constraint firstItem="6ZC-qi-Dvp" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" constant="24" id="o2l-Ic-bYN"/>
                             <constraint firstItem="IlD-zg-hWf" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" type="default" id="p4S-z4-LhD"/>
+                            <constraint firstItem="cjn-v0-SDf" firstAttribute="leading" secondItem="6ZC-qi-Dvp" secondAttribute="leading" type="default" id="phw-eX-8L5"/>
                             <constraint firstAttribute="trailing" secondItem="uqp-dE-wvd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qYE-JU-BWD"/>
                             <constraint firstItem="BGO-uy-i9W" firstAttribute="top" secondItem="dpD-nf-Vs7" secondAttribute="top" constant="153" id="rEA-6T-G5M"/>
                             <constraint firstAttribute="bottom" secondItem="uqp-dE-wvd" secondAttribute="bottom" constant="37" id="utc-rS-bqw"/>
                             <constraint firstItem="xI5-gi-ENu" firstAttribute="centerY" secondItem="IlD-zg-hWf" secondAttribute="centerY" type="default" id="xmN-pm-eht"/>
-                            <constraint firstItem="6ZC-qi-Dvp" firstAttribute="centerX" secondItem="zGP-0w-WW3" secondAttribute="centerX" type="default" id="zoK-Mo-y94"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mTM-bj-U9B"/>
+                    <connections>
+                        <outlet property="profilePic" destination="6ZC-qi-Dvp" id="ECr-Ua-M3z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmm-at-fNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -593,7 +615,9 @@
         <class className="ProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addOrTakePic:"/>
                 <relationship kind="action" name="pressedVenmoButton:"/>
+                <relationship kind="outlet" name="profilePic" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="SellViewController" superclassName="UIViewController">
