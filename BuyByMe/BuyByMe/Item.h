@@ -21,6 +21,7 @@ typedef enum{
     NSString        *description;
     NSString        *category;
     CLLocation      *originalLocation;
+    NSString        *itemId;
     Category        cat;
     NSNumber        *price;
     bool            isNegotiable;
@@ -45,6 +46,7 @@ typedef enum{
 @property(nonatomic, strong) NSString *posterId;
 @property(nonatomic, strong) NSDate *end_date;
 @property(nonatomic, strong)UIImage *picture;
+@property(nonatomic, strong) NSString *itemId;
 
 -(void)convertStringToCategory:(NSString*)category_string;
 

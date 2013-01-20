@@ -14,10 +14,12 @@
     
     VenmoTransaction            *venmoTransaction;
     CLLocation                  *userLocation;
+    NSString                    *itemId;
     
 }
 
 @property (nonatomic, strong)  Item *selectedItem;
+@property (nonatomic, strong) NSString *itemId;
 @property (nonatomic, strong) CLLocation *userLocation;
 
 -(IBAction)pressBuy:(id)sender;
