@@ -1,4 +1,4 @@
-//
+    //
 //  ViewController.m
 //  BuyByMe
 //
@@ -173,12 +173,14 @@
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
         if(sender == self.searchDisplayController.searchResultsTableView) {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[filteredItemArray objectAtIndex:[indexPath row]] name];
+            
+            
+            NSString *destinationTitle = [[filteredItemArray objectAtIndex:[indexPath row]] objectForKey:@"title"];
             [itemDetailViewController setTitle:destinationTitle];
         }
         else {
             NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
-            NSString *destinationTitle = [[items objectAtIndex:[indexPath row]] name];
+            NSString *destinationTitle = [[items objectAtIndex:[indexPath row]] objectForKey:@"title"];
             [itemDetailViewController setTitle:destinationTitle];
         }
         
