@@ -9,10 +9,12 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+@property(nonatomic, strong) IBOutlet UILabel *label;
 
 @end
 
 @implementation FirstViewController
+@synthesize label;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +29,21 @@
 {
     NSLog(@"ViewDIdLoad on first view controller");
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_bar"]
+                                                  forBarMetrics:UIBarMetricsDefault];
+
+    UIFont* font = [UIFont fontWithName:@"Novecentowide-Book" size:22];
+    
+    [label setFont:font];
+
+    //157 54
+    
 	// Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+
 }
 
 -(IBAction)didPressBuy:(id)sender {

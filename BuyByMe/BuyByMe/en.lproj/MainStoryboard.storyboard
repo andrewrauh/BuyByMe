@@ -12,9 +12,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltm-7p-Wpp">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background-568h@2x.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="j8z-At-UXT"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltm-7p-Wpp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="QVH-TD-R7A"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Sell">
+                                <state key="normal" title="Sell" image="list_button_reg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,9 +30,13 @@
                                     <segue destination="uB8-gd-o8x" kind="push" id="NOb-Aj-l2Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vt-9t-95J">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vt-9t-95J">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="CXw-zl-Saq"/>
+                                    <constraint firstAttribute="width" constant="157" id="Msd-jE-G3j"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Buy">
+                                <state key="normal" image="explore_button_reg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,9 +48,12 @@
                                     <segue destination="2" kind="push" id="Ak4-We-WZ0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbZ-US-fIp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbZ-US-fIp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="LV3-9D-BM9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Profile">
+                                <state key="normal" image="account_button_reg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -54,9 +65,12 @@
                                     <segue destination="hag-pe-aoy" kind="push" id="s6r-Vx-vpF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-WJ-AgF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-WJ-AgF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="sGj-Uc-X9l"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Pending Transactions">
+                                <state key="normal" image="deals_button_reg.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -67,20 +81,49 @@
                                     <segue destination="u0B-VJ-Dan" kind="push" id="Bbi-IP-bOa"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="black_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-n7-uJf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="ARc-cP-AtG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What shall you uncover in Philadelphia today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="jpS-21-ehf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="g6W-BX-Mux"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="centerX" secondItem="Ivg-SB-WzC" secondAttribute="centerX" type="default" id="8nE-7X-LDE"/>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="155" id="Aek-5P-hzz"/>
-                            <constraint firstItem="WHU-WJ-AgF" firstAttribute="centerX" secondItem="HbZ-US-fIp" secondAttribute="centerX" type="default" id="Xe0-XU-ENg"/>
-                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="top" secondItem="9Vt-9t-95J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="c94-eg-PWK"/>
-                            <constraint firstItem="WHU-WJ-AgF" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="210" id="f0c-ne-mSo"/>
-                            <constraint firstItem="9Vt-9t-95J" firstAttribute="leading" secondItem="ltm-7p-Wpp" secondAttribute="leading" type="default" id="l9m-38-Svh"/>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="centerX" secondItem="9Vt-9t-95J" secondAttribute="centerX" type="default" id="nMt-zf-kC7"/>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="top" secondItem="ltm-7p-Wpp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tcX-mK-DhO"/>
+                            <constraint firstItem="9Vt-9t-95J" firstAttribute="trailing" secondItem="ltm-7p-Wpp" secondAttribute="trailing" type="default" id="11I-Yv-GW3"/>
+                            <constraint firstItem="dOt-n7-uJf" firstAttribute="top" secondItem="jpS-21-ehf" secondAttribute="top" type="default" id="2Fd-Lu-uz5"/>
+                            <constraint firstItem="j8z-At-UXT" firstAttribute="leading" secondItem="Ivg-SB-WzC" secondAttribute="leading" type="default" id="7XZ-Yt-vy9"/>
+                            <constraint firstItem="j8z-At-UXT" firstAttribute="bottom" secondItem="Ivg-SB-WzC" secondAttribute="bottom" type="default" id="9k0-Np-cE3"/>
+                            <constraint firstAttribute="bottom" secondItem="WHU-WJ-AgF" secondAttribute="bottom" constant="34" id="FBC-mI-952"/>
+                            <constraint firstItem="j8z-At-UXT" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" type="default" id="Lrr-Rr-JWE"/>
+                            <constraint firstItem="jpS-21-ehf" firstAttribute="leading" secondItem="Ivg-SB-WzC" secondAttribute="leading" type="default" id="OkF-0O-UO9"/>
+                            <constraint firstItem="WHU-WJ-AgF" firstAttribute="leading" secondItem="HbZ-US-fIp" secondAttribute="leading" type="default" id="QMt-gl-hqC"/>
+                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="leading" secondItem="9Vt-9t-95J" secondAttribute="leading" type="default" id="RgA-z7-QIF"/>
+                            <constraint firstItem="jpS-21-ehf" firstAttribute="trailing" secondItem="Ivg-SB-WzC" secondAttribute="trailing" type="default" id="TtT-sI-oRY"/>
+                            <constraint firstItem="HbZ-US-fIp" firstAttribute="trailing" secondItem="WHU-WJ-AgF" secondAttribute="trailing" type="default" id="bST-Bo-E2i"/>
+                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="leading" secondItem="HbZ-US-fIp" secondAttribute="leading" type="default" id="dvw-UR-MjE"/>
+                            <constraint firstItem="j8z-At-UXT" firstAttribute="trailing" secondItem="dOt-n7-uJf" secondAttribute="trailing" type="default" id="fin-ox-Ux0"/>
+                            <constraint firstItem="dOt-n7-uJf" firstAttribute="centerX" secondItem="jpS-21-ehf" secondAttribute="centerX" type="default" id="h1I-vf-8Oy"/>
+                            <constraint firstItem="9Vt-9t-95J" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="127" id="ica-wI-f2H"/>
+                            <constraint firstItem="jpS-21-ehf" firstAttribute="centerX" secondItem="9Vt-9t-95J" secondAttribute="centerX" type="default" id="kJF-Zp-Tyh"/>
+                            <constraint firstItem="dOt-n7-uJf" firstAttribute="leading" secondItem="Ivg-SB-WzC" secondAttribute="leading" type="default" id="uEF-ez-a6g"/>
+                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="192" id="vlN-hR-wxb"/>
+                            <constraint firstItem="dOt-n7-uJf" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="24" id="wiL-iV-YSR"/>
+                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="trailing" secondItem="HbZ-US-fIp" secondAttribute="trailing" type="default" id="xHO-bD-HMy"/>
+                            <constraint firstAttribute="bottom" secondItem="HbZ-US-fIp" secondAttribute="bottom" constant="98" id="ysu-7I-RNQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gHp-st-37S"/>
+                    <connections>
+                        <outlet property="label" destination="jpS-21-ehf" id="Ny2-8Z-o9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrW-5q-Xy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -458,7 +501,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="account_button_reg.png" width="314" height="108"/>
+        <image name="background-568h@2x.jpg" width="640" height="1136"/>
+        <image name="black_bar.png" width="640" height="155"/>
         <image name="chris2.png" width="225" height="179"/>
+        <image name="deals_button_reg.png" width="314" height="108"/>
+        <image name="explore_button_reg.png" width="314" height="108"/>
+        <image name="list_button_reg.png" width="314" height="108"/>
     </resources>
     <classes>
         <class className="CompleteTransactionViewController" superclassName="UIViewController">
@@ -470,6 +519,7 @@
                 <relationship kind="action" name="didPressBuy:"/>
                 <relationship kind="action" name="didPressProfile:"/>
                 <relationship kind="action" name="didPressSell:"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="InfoViewController" superclassName="UIViewController">
