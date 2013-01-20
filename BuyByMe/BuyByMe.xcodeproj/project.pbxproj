@@ -12,8 +12,18 @@
 		AF29A44116AA449A00B9AE1F /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A44016AA449A00B9AE1F /* Offer.m */; };
 		AF29A47F16AA593200B9AE1F /* chris2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF29A47E16AA593200B9AE1F /* chris2.png */; };
 		AF29A48316AA5AD800B9AE1F /* CLController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29A48216AA5AD800B9AE1F /* CLController.m */; };
-		AF29A48516AA5F8D00B9AE1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */; };
-		AF29A48716AA629400B9AE1F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A48616AA629400B9AE1F /* MobileCoreServices.framework */; };
+		AF40562E16AB70C100E11BE8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40562D16AB70C100E11BE8 /* Parse.framework */; };
+		AF40563016AB70ED00E11BE8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40562F16AB70EC00E11BE8 /* AudioToolbox.framework */; };
+		AF40563216AB70F400E11BE8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563116AB70F400E11BE8 /* Accounts.framework */; };
+		AF40563416AB710700E11BE8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563316AB710700E11BE8 /* AdSupport.framework */; };
+		AF40563616AB719C00E11BE8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563516AB719C00E11BE8 /* CFNetwork.framework */; };
+		AF40563816AB71B600E11BE8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563716AB71B600E11BE8 /* libsqlite3.dylib */; };
+		AF40563A16AB71C400E11BE8 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563916AB71C300E11BE8 /* libz.1.1.3.dylib */; };
+		AF40563C16AB71D700E11BE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563B16AB71D700E11BE8 /* QuartzCore.framework */; };
+		AF40563E16AB71DD00E11BE8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563D16AB71DD00E11BE8 /* Security.framework */; };
+		AF40564016AB71E300E11BE8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40563F16AB71E300E11BE8 /* Social.framework */; };
+		AF40564216AB71E900E11BE8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40564116AB71E900E11BE8 /* StoreKit.framework */; };
+		AF40564416AB71F100E11BE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF40564316AB71F000E11BE8 /* SystemConfiguration.framework */; };
 		F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */; };
 		F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C016AA3E1D004DD1E5 /* Foundation.framework */; };
 		F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C216AA3E1D004DD1E5 /* CoreGraphics.framework */; };
@@ -130,6 +140,18 @@
 		AF29A4CB16AB056500B9AE1F /* VenmoClientSpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenmoClientSpecs.m; sourceTree = "<group>"; };
 		AF29A4CC16AB056500B9AE1F /* VenmoTransactionSpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenmoTransactionSpecs.m; sourceTree = "<group>"; };
 		AF29A4CD16AB056500B9AE1F /* VenmoViewControllerSpecs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenmoViewControllerSpecs.m; sourceTree = "<group>"; };
+		AF40562D16AB70C100E11BE8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		AF40562F16AB70EC00E11BE8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AF40563116AB70F400E11BE8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		AF40563316AB710700E11BE8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		AF40563516AB719C00E11BE8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AF40563716AB71B600E11BE8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AF40563916AB71C300E11BE8 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		AF40563B16AB71D700E11BE8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AF40563D16AB71DD00E11BE8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AF40563F16AB71E300E11BE8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		AF40564116AB71E900E11BE8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		AF40564316AB71F000E11BE8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F9F635BA16AA3E1D004DD1E5 /* BuyByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9F635C016AA3E1D004DD1E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,14 +187,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF40564416AB71F100E11BE8 /* SystemConfiguration.framework in Frameworks */,
+				AF40564216AB71E900E11BE8 /* StoreKit.framework in Frameworks */,
+				AF40564016AB71E300E11BE8 /* Social.framework in Frameworks */,
+				AF40563E16AB71DD00E11BE8 /* Security.framework in Frameworks */,
+				AF40563C16AB71D700E11BE8 /* QuartzCore.framework in Frameworks */,
+				F9F635FE16AA621F004DD1E5 /* MobileCoreServices.framework in Frameworks */,
+				AF40563A16AB71C400E11BE8 /* libz.1.1.3.dylib in Frameworks */,
+				AF40563816AB71B600E11BE8 /* libsqlite3.dylib in Frameworks */,
+				F9F6360116AA6225004DD1E5 /* CoreLocation.framework in Frameworks */,
+				F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */,
+				AF40563616AB719C00E11BE8 /* CFNetwork.framework in Frameworks */,
+				AF40563416AB710700E11BE8 /* AdSupport.framework in Frameworks */,
+				AF40563216AB70F400E11BE8 /* Accounts.framework in Frameworks */,
+				AF40563016AB70ED00E11BE8 /* AudioToolbox.framework in Frameworks */,
 				F9F6361B16AB0B60004DD1E5 /* libVenmo.a in Frameworks */,
-				AF29A48716AA629400B9AE1F /* MobileCoreServices.framework in Frameworks */,
-				AF29A48516AA5F8D00B9AE1F /* CoreLocation.framework in Frameworks */,
 				F9F6360116AA6225004DD1E5 /* CoreLocation.framework in Frameworks */,
 				F9F635FE16AA621F004DD1E5 /* MobileCoreServices.framework in Frameworks */,
 				F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */,
 				F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */,
-				F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */,
+				AF40562E16AB70C100E11BE8 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +374,17 @@
 		F9F635AF16AA3E1D004DD1E5 = {
 			isa = PBXGroup;
 			children = (
+				AF40564316AB71F000E11BE8 /* SystemConfiguration.framework */,
+				AF40564116AB71E900E11BE8 /* StoreKit.framework */,
+				AF40563F16AB71E300E11BE8 /* Social.framework */,
+				AF40563D16AB71DD00E11BE8 /* Security.framework */,
+				AF40563B16AB71D700E11BE8 /* QuartzCore.framework */,
+				AF40563916AB71C300E11BE8 /* libz.1.1.3.dylib */,
+				AF40563716AB71B600E11BE8 /* libsqlite3.dylib */,
+				AF40563516AB719C00E11BE8 /* CFNetwork.framework */,
+				AF40563316AB710700E11BE8 /* AdSupport.framework */,
+				AF40563116AB70F400E11BE8 /* Accounts.framework */,
+				AF40562F16AB70EC00E11BE8 /* AudioToolbox.framework */,
 				AF29A48616AA629400B9AE1F /* MobileCoreServices.framework */,
 				AF29A48416AA5F8D00B9AE1F /* CoreLocation.framework */,
 				F9F6360016AA6225004DD1E5 /* CoreLocation.framework */,
@@ -362,6 +407,7 @@
 		F9F635BD16AA3E1D004DD1E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF40562D16AB70C100E11BE8 /* Parse.framework */,
 				F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */,
 				F9F635C016AA3E1D004DD1E5 /* Foundation.framework */,
 				F9F635C216AA3E1D004DD1E5 /* CoreGraphics.framework */,
@@ -373,9 +419,9 @@
 			isa = PBXGroup;
 			children = (
 				F9F635CD16AA3E1D004DD1E5 /* AppDelegate.h */,
+				F9F635CE16AA3E1D004DD1E5 /* AppDelegate.m */,
 				AF29A43816AA414300B9AE1F /* User.h */,
 				AF29A43916AA414300B9AE1F /* User.m */,
-				F9F635CE16AA3E1D004DD1E5 /* AppDelegate.m */,
 				F9F635D616AA3E1D004DD1E5 /* MainStoryboard.storyboard */,
 				F9F635D916AA3E1D004DD1E5 /* ViewController.h */,
 				F9F635DA16AA3E1D004DD1E5 /* ViewController.m */,
@@ -611,6 +657,10 @@
 		F9F635DF16AA3E1D004DD1E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BuyByMe/BuyByMe-Prefix.pch";
 				HEADER_SEARCH_PATHS = ../Libraries/Venmo;
@@ -628,6 +678,10 @@
 		F9F635E016AA3E1D004DD1E5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BuyByMe/BuyByMe-Prefix.pch";
 				HEADER_SEARCH_PATHS = ../Libraries/Venmo;

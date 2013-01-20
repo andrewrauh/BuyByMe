@@ -92,6 +92,7 @@
 
     InfoViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"InfoVC"];
     [controller setSelectedItem:[webServices.allItems objectAtIndex:indexPath.row]];
+    [controller setUserLocation:userLocation];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

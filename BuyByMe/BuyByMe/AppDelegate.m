@@ -7,13 +7,45 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"Otj6igLAHEIQQuawrSCgcWcfzFwBi32y6n7HU2rB"
+                  clientKey:@"88BCRwW4Tl3dMX7GRJWgwjGhajXMuIXKYFJSqQml"];
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"openURL: %@", url);
+    return [venmoClient openURL:url completionHandler:^(VenmoTransaction *transaction, NSError *error) {
+        if (transaction) {
+            NSString *success = (transaction.success ? @"Success" : @"Failure");
+            NSString *title = [@"Transaction " stringByAppendingString:success];
+            NSString *message = [@"payment_id: " stringByAppendingFormat:@"%@. %@ %@ %@ (%@) $%@ %@",
+                                 transaction.transactionID,
+                                 transaction.fromUserID,
+                                 transaction.typeStringPast,
+                                 transaction.toUserHandle,
+                                 transaction.toUserID,
+                                 transaction.amountString,
+                                 transaction.note];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message
+                                                               delegate:nil cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        } else { // error
+            NSLog(@"transaction error code: %i", error.code);
+        }
+    }];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -8,6 +8,7 @@
 
 #import "InfoViewController.h"
 #import "WebServices.h"
+#import "AppDelegate.h"
 
 static NSString *const kVenmoAppId      = @"1220";
 static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
@@ -17,7 +18,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 @end
 
 @implementation InfoViewController
-@synthesize venmoClient,selectedItem;
+@synthesize selectedItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +34,8 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     // Do any additional setup after loading the view, typically from a nib.
-    venmoClient = [VenmoClient clientWithAppId:kVenmoAppId secret:kVenmoAppSecret];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    appDelegate.venmoClient = [VenmoClient clientWithAppId:kVenmoAppId secret:kVenmoAppSecret];
     
     venmoTransaction = [[VenmoTransaction alloc] init];
     venmoTransaction.type = VenmoTransactionTypePay;
@@ -41,7 +43,6 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     venmoTransaction.note = @"hello world";
     venmoTransaction.toUserHandle = @"mattdipasquale";
     
-    // Create two buttons: one for Venmo...
     
      CGRect buttonRect = CGRectMake(40.0f, 20.0f, 90.0f, 40.0f);
      UIButton *venmoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -54,7 +55,9 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 }
 
 - (void)openVenmoAction {
-    VenmoViewController *venmoViewController = [venmoClient viewControllerWithTransaction:
+    [self checkLocations];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    VenmoViewController *venmoViewController = [appDelegate.venmoClient viewControllerWithTransaction:
                                                 venmoTransaction];
     if (venmoViewController) {
         [self presentModalViewController:venmoViewController animated:YES];
@@ -66,6 +69,13 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     [webServices retrieveSellerUserData:selectedItem.posterId];
 }
 
+-(void)checkLocations{
+    CLLocation *otherUserLocation = [[CLLocation alloc] initWithLatitude:36.164488 longitude:-86.781006];
+    CLLocationDistance distance = [userLocation distanceFromLocation:otherUserLocation];
+    if(distance > 1000){
+        NSLog(@"They are more than 1000 meters away from one another");
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

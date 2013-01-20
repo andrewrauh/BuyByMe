@@ -12,14 +12,15 @@
 
 @interface InfoViewController : UIViewController{
     
-    VenmoClient                 *venmoClient;
     VenmoTransaction            *venmoTransaction;
+    CLLocation                  *userLocation;
     
 }
 
-@property (nonatomic, strong) VenmoClient *venmoClient;
 @property (nonatomic, strong)  Item *selectedItem;
+@property (nonatomic, strong) CLLocation *userLocation;
 
 -(IBAction)pressBuy:(id)sender;
+-(void)checkLocations;
 
 @end
