@@ -7,6 +7,10 @@
 //
 
 #import "CompleteTransactionViewController.h"
+#import "AppDelegate.h"
+
+static NSString *const kVenmoAppId      = @"1220";
+static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 @interface CompleteTransactionViewController ()
 
@@ -14,6 +18,7 @@
 
 @implementation CompleteTransactionViewController
 @synthesize image,item,transaction;
+@synthesize pic, titleLabel, description, priceLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +32,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    appDelegate.venmoClient = [VenmoClient clientWithAppId:kVenmoAppId secret:kVenmoAppSecret];
+    
+    venmoTransaction = [[VenmoTransaction alloc] init];
+    venmoTransaction.type = VenmoTransactionTypePay;
+    venmoTransaction.amount = [NSDecimalNumber decimalNumberWithString:@"3.45"];
+    venmoTransaction.note = @"hello world";
+    venmoTransaction.toUserHandle = @"mattdipasquale";
 	// Do any additional setup after loading the view.
 }
 
