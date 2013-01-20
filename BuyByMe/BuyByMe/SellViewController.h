@@ -12,7 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>{
+@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate, UITextFieldDelegate>{
     
     CLLocationManager           *locationManager;
     CLLocation                  *userLocation;
@@ -28,6 +28,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *price;
 @property (nonatomic, strong) IBOutlet UIImageView *picture;
 
+-(UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 
 -(IBAction)addOrTakePic:(id)sender;
 -(IBAction)didPressDone:(id)sender;

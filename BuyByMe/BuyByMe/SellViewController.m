@@ -43,6 +43,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [price setTextColor:[UIColor whiteColor]];
+    price.delegate = self;
+    titleItem.delegate = self;
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -151,6 +155,14 @@ finishedSavingWithError:(NSError *)error
     }
 }
 
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 -(IBAction)didPressDone:(id)sender {
     Item *newItem = [[Item alloc]init];
     [newItem setTitle:titleItem.text];
@@ -160,7 +172,10 @@ finishedSavingWithError:(NSError *)error
     
     PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:userLocation.coordinate.latitude longitude:userLocation.coordinate.longitude];
     
+    CGSize halfSize = CGSizeMake(picture.image.size.width*0.5, picture.image.size.height*0.5);
     
+    UIImage *newImage = [self imageWithImage:picture.image scaledToSize:halfSize];
+    picture.image = newImage;
     // Create the Item
     PFUser *currentUser = [PFUser currentUser];
     PFObject *myItem = [PFObject objectWithClassName:@"Item"];
@@ -184,5 +199,10 @@ finishedSavingWithError:(NSError *)error
     [self.navigationController popViewControllerAnimated:YES];
 
     
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 @end
