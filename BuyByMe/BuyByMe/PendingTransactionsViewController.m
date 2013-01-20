@@ -79,9 +79,11 @@
     
     PFObject *curTrans = pendingTransactions[indexPath.row];
     
-    PFObject *curItem = [curTrans objectForKey:@"item"];
+    PFObject *curItem = [[curTrans objectForKey:@"item"] fetchIfNeeded];
     
-    NSLog(@"Item object Id: %@" , [curTrans objectForKey:@"item"]);
+    NSLog(@"Item object Id: %@" , curItem);
+
+    NSLog(@"Item object Id: %@" , [curItem objectForKey:@"title"]);
     
     PFFile *img = [curItem objectForKey:@"image"];
     if (img) {
