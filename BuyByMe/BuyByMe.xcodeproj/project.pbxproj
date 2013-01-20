@@ -31,6 +31,10 @@
 		F98A6B0116AB94FE00B8B903 /* picbox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98A6AFA16AB94FD00B8B903 /* picbox.jpg */; };
 		F98A6B0216AB94FE00B8B903 /* moneyunderline.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A6AFB16AB94FE00B8B903 /* moneyunderline.png */; };
 		F98A6B0316AB94FE00B8B903 /* sell_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98A6AFC16AB94FE00B8B903 /* sell_background.jpg */; };
+		F98A6B0816ABA9FE00B8B903 /* venmo_button_hover.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A6B0416ABA9FD00B8B903 /* venmo_button_hover.png */; };
+		F98A6B0916ABA9FE00B8B903 /* venmo_button_reg.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A6B0516ABA9FD00B8B903 /* venmo_button_reg.png */; };
+		F98A6B0A16ABA9FE00B8B903 /* name_line.png in Resources */ = {isa = PBXBuildFile; fileRef = F98A6B0616ABA9FD00B8B903 /* name_line.png */; };
+		F98A6B0B16ABA9FE00B8B903 /* profile_pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F98A6B0716ABA9FE00B8B903 /* profile_pic.jpg */; };
 		F9F635BF16AA3E1D004DD1E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */; };
 		F9F635C116AA3E1D004DD1E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C016AA3E1D004DD1E5 /* Foundation.framework */; };
 		F9F635C316AA3E1D004DD1E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F635C216AA3E1D004DD1E5 /* CoreGraphics.framework */; };
@@ -176,6 +180,10 @@
 		F98A6AFA16AB94FD00B8B903 /* picbox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = picbox.jpg; sourceTree = "<group>"; };
 		F98A6AFB16AB94FE00B8B903 /* moneyunderline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moneyunderline.png; sourceTree = "<group>"; };
 		F98A6AFC16AB94FE00B8B903 /* sell_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sell_background.jpg; sourceTree = "<group>"; };
+		F98A6B0416ABA9FD00B8B903 /* venmo_button_hover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venmo_button_hover.png; sourceTree = "<group>"; };
+		F98A6B0516ABA9FD00B8B903 /* venmo_button_reg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venmo_button_reg.png; sourceTree = "<group>"; };
+		F98A6B0616ABA9FD00B8B903 /* name_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name_line.png; sourceTree = "<group>"; };
+		F98A6B0716ABA9FE00B8B903 /* profile_pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile_pic.jpg; sourceTree = "<group>"; };
 		F9F635BA16AA3E1D004DD1E5 /* BuyByMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyByMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F635BE16AA3E1D004DD1E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9F635C016AA3E1D004DD1E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -454,6 +462,10 @@
 		F9F635C416AA3E1D004DD1E5 /* BuyByMe */ = {
 			isa = PBXGroup;
 			children = (
+				F98A6B0416ABA9FD00B8B903 /* venmo_button_hover.png */,
+				F98A6B0516ABA9FD00B8B903 /* venmo_button_reg.png */,
+				F98A6B0616ABA9FD00B8B903 /* name_line.png */,
+				F98A6B0716ABA9FE00B8B903 /* profile_pic.jpg */,
 				F98A6AF616AB94FD00B8B903 /* back_button_hover.png */,
 				F98A6AF716AB94FD00B8B903 /* back_button_reg.png */,
 				F98A6AF816AB94FD00B8B903 /* done_button_hover@2x.png */,
@@ -619,6 +631,10 @@
 				F98A6B0116AB94FE00B8B903 /* picbox.jpg in Resources */,
 				F98A6B0216AB94FE00B8B903 /* moneyunderline.png in Resources */,
 				F98A6B0316AB94FE00B8B903 /* sell_background.jpg in Resources */,
+				F98A6B0816ABA9FE00B8B903 /* venmo_button_hover.png in Resources */,
+				F98A6B0916ABA9FE00B8B903 /* venmo_button_reg.png in Resources */,
+				F98A6B0A16ABA9FE00B8B903 /* name_line.png in Resources */,
+				F98A6B0B16ABA9FE00B8B903 /* profile_pic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
