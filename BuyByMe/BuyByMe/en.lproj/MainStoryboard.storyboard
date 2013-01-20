@@ -310,8 +310,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sell_background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uMt-6l-5ZG">
                                 <color key="backgroundColor" red="0.91725593065693434" green="0.48129562043795615" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.20000000000000015" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0c1-Dd-D1W">
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0c1-Dd-D1W">
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.20999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Pz7-Ki-LDF"/>
                                 </constraints>
@@ -319,8 +319,8 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.19999999999999998" contentMode="scaleToFill" text="Describe your item here! Tap to edit." translatesAutoresizingMaskIntoConstraints="NO" id="TSl-WB-n8a">
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.99999999999999989" contentMode="scaleToFill" text="Describe your item here! Tap to edit." translatesAutoresizingMaskIntoConstraints="NO" id="TSl-WB-n8a">
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.20999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="3kg-go-2VN"/>
                                     <constraint firstAttribute="height" constant="122" id="Ltg-8B-KIN"/>
@@ -355,7 +355,6 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="moneyunderline.png" translatesAutoresizingMaskIntoConstraints="NO" id="U87-Me-paa">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="3" id="ONR-F5-hSu"/>
                                     <constraint firstAttribute="width" constant="97" id="XlI-Sp-dR1"/>
                                 </constraints>
                             </imageView>
@@ -393,9 +392,8 @@
                             <constraint firstItem="UwE-An-kSA" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" type="default" id="DoG-cZ-of6"/>
                             <constraint firstItem="UwE-An-kSA" firstAttribute="trailing" secondItem="hQL-EK-wjh" secondAttribute="trailing" type="default" id="HCd-QO-Mc0"/>
                             <constraint firstItem="0c1-Dd-D1W" firstAttribute="trailing" secondItem="U87-Me-paa" secondAttribute="trailing" type="default" id="JqY-64-981"/>
-                            <constraint firstItem="0KX-Ww-WnJ" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" constant="112" id="QCi-Eh-Abk"/>
                             <constraint firstItem="PAM-Tx-ZEe" firstAttribute="trailing" secondItem="hQL-EK-wjh" secondAttribute="trailing" type="default" id="Qlx-zR-sTN"/>
-                            <constraint firstItem="U87-Me-paa" firstAttribute="top" secondItem="0KX-Ww-WnJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="V1a-vM-Xqn"/>
+                            <constraint firstItem="0c1-Dd-D1W" firstAttribute="centerY" secondItem="0KX-Ww-WnJ" secondAttribute="centerY" type="default" id="Qsy-z5-1Kr"/>
                             <constraint firstItem="U87-Me-paa" firstAttribute="centerX" secondItem="Ms8-cF-qPh" secondAttribute="centerX" type="default" id="auJ-Fo-WcB"/>
                             <constraint firstItem="kFb-Fa-wvn" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="1" id="bEd-l7-sUq"/>
                             <constraint firstItem="PAM-Tx-ZEe" firstAttribute="top" secondItem="hQL-EK-wjh" secondAttribute="top" constant="207" id="c3h-dU-bxD"/>
@@ -408,6 +406,7 @@
                             <constraint firstAttribute="bottom" secondItem="U87-Me-paa" secondAttribute="bottom" constant="45" id="mVd-Fy-anZ"/>
                             <constraint firstItem="kFb-Fa-wvn" firstAttribute="centerX" secondItem="UwE-An-kSA" secondAttribute="centerX" type="default" id="oqj-gi-2us"/>
                             <constraint firstItem="uMt-6l-5ZG" firstAttribute="bottom" secondItem="hQL-EK-wjh" secondAttribute="bottom" type="default" id="s1m-6P-grF"/>
+                            <constraint firstItem="0KX-Ww-WnJ" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" constant="114" id="tAM-Zj-fu3"/>
                             <constraint firstItem="PAM-Tx-ZEe" firstAttribute="leading" secondItem="hQL-EK-wjh" secondAttribute="leading" type="default" id="vEO-ar-aod"/>
                         </constraints>
                     </view>
