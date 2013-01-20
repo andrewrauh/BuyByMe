@@ -98,13 +98,20 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
     PFObject *object;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
        object = [filteredItemArray objectAtIndex:indexPath.row];
     } else {
         object = [items objectAtIndex:indexPath.row];
     }
+    PFFile *img = [object objectForKey:@"image"];
+    if (img) {
+        NSData *imgData = [img getData];
+        [cell.imageView setImage:[UIImage imageWithData:imgData] ];
+    } else {
+        [cell.imageView setImage:[UIImage imageNamed:@"chris2.png"]];
+    }
+
     NSString *title = [object objectForKey:@"title"];
     NSString *description = [object objectForKey:@"description"];
     //NSLog(@"CFR: All items are %@", webServices.allItems);
