@@ -27,5 +27,7 @@
 @property (nonatomic, strong) PFFile *image;
 
 
+-(IBAction)buyNow:(id)sender;
+
 
 @end
