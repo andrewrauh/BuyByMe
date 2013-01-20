@@ -9,6 +9,7 @@
 #import "InfoViewController.h"
 #import "WebServices.h"
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 static NSString *const kVenmoAppId      = @"1220";
 static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
@@ -66,15 +67,21 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 }
 
 -(IBAction)pressBuy:(id)sender{
-    WebServices *webServices = [WebServices sharedInstance];
-    [webServices retrieveSellerUserData:selectedItem.posterId];
-     sellingUser = [[User alloc]init];
-     [sellingUser setFirstname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"first_name"]];
-     [sellingUser setLastname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"last_name"]];
-    [sellingUser setLastname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"last_name"]];
-    //venmoId, firstname, lastname, isBuyer, isVerified,profilePic
-//      [sellingUser setIsBuyer:[]
-
+    // set Item to inactive
+    PFObject *item = [PFObject objectWithClassName:@"Item"];
+    [item setObject:[NSNumber numberWithBool:NO] forKey:@"active"];
+    [item saveInBackground];
+    
+    //and create new transaction
+    PFObject *newTransaction = [PFObject objectWithClassName:@"Transaction"];
+    
+    
+    [newTransaction setObject:[Item valueForKey:@"poster"] forKey:@"seller"];
+    [newTransaction setObject:[PFUser currentUser] forKey:@"buyer"];
+    [newTransaction setObject:item forKey:@"item"];
+    [newTransaction setObject:[NSNumber numberWithBool:NO] forKey:@"pending"];
+    [newTransaction setObject:[item valueForKey:@"price"] forKey:@"price"];
+    [newTransaction saveInBackground];
 }
 
 -(void)checkLocations{
