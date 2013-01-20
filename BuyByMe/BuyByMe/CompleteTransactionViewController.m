@@ -13,6 +13,7 @@
 @end
 
 @implementation CompleteTransactionViewController
+@synthesize image,item,transaction;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

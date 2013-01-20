@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface CompleteTransactionViewController : UIViewController
+
+
+@property (nonatomic, strong) PFObject *item;
+@property (nonatomic, strong) PFObject *transaction;
+@property (nonatomic, strong) PFFile *image;
+
+
 
 @end

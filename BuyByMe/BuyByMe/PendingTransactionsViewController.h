@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface PendingTransactionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
 
 @property (nonatomic, retain) NSArray *pendingTransactions;
 @property (nonatomic, retain) IBOutlet UITableView *mytableView;
 @property (nonatomic, retain) IBOutlet UILabel *transactionHeaderLabel;
+
+
+
 @end

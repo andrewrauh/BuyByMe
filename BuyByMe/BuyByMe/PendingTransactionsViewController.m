@@ -105,6 +105,12 @@
     
     CompleteTransactionViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"CompleteVC"];
 //    [controller setSelectedItem:[webServices.allItems objectAtIndex:indexPath.row]];
+    PFObject *curTrans = pendingTransactions[indexPath.row];
+    PFObject *curItem = [[curTrans objectForKey:@"item"] fetchIfNeeded];
+    PFFile *img = [curItem objectForKey:@"image"];
+    [controller setImage:img];
+    [controller setItem:curItem];
+    [controller setTransaction:curTrans];
     [self.navigationController pushViewController:controller animated:YES];
 
 //    [self.navigationController pushViewController:controller animated:YES];
