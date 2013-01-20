@@ -178,10 +178,9 @@
         InfoViewController *itemDetailViewController = [segue destinationViewController];
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            PFObject *itemObject = [filteredItemArray objectAtIndex:indexPath.row];
-            NSString *itemId = itemObject.objectId;
-            [itemDetailViewController setItemId:itemId];
-        
+        PFObject *itemObject = [filteredItemArray objectAtIndex:indexPath.row];
+        NSString *itemId = itemObject.objectId;
+        [itemDetailViewController setItemId:itemId];
     }
 }
 
