@@ -32,6 +32,10 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [titleLabel setText:[item objectForKey:@"title"]];
+    [description setText:[item objectForKey:@"description"]];
+    [priceLabel setText:[NSString stringWithFormat:@"$ %@", [item objectForKey:@"price"]]];
+
     // Do any additional setup after loading the view, typically from a nib.
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     appDelegate.venmoClient = [VenmoClient clientWithAppId:kVenmoAppId secret:kVenmoAppSecret];
@@ -45,6 +49,11 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     venmoTransaction.amount = [NSDecimalNumber decimalNumberWithString:string];
     venmoTransaction.note = itemDescription;
     venmoTransaction.toUserHandle = @"Jesse-Daughtery";
+    
+    NSData *imageData = [image getData];
+    UIImage *pict = [[UIImage alloc]initWithData:imageData];
+    [pic setImage:pict];
+
 	// Do any additional setup after loading the view.
 }
 
