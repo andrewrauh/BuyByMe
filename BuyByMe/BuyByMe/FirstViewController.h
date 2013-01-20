@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CLController.h"
+#import <Parse/Parse.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
     
 -(IBAction)didPressBuy:(id)sender;
 -(IBAction)didPressSell:(id)sender;
