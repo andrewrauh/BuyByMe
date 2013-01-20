@@ -319,7 +319,7 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.19999999999999998" contentMode="scaleToFill" text="Describe your item!" translatesAutoresizingMaskIntoConstraints="NO" id="TSl-WB-n8a">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.19999999999999998" contentMode="scaleToFill" text="Describe your item here! Tap to edit." translatesAutoresizingMaskIntoConstraints="NO" id="TSl-WB-n8a">
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="3kg-go-2VN"/>
@@ -369,7 +369,7 @@
                                 <color key="textColor" red="0.91725593065693434" green="0.37120780109489043" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ITEM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-cF-qPh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ITEM NAME" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-cF-qPh">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="LAq-Aw-ARl"/>
                                     <constraint firstAttribute="height" constant="30" id="rKE-GT-jKJ"/>
@@ -715,73 +715,6 @@
         <image name="sell_background.jpg" width="640" height="1136"/>
         <image name="venmo_button_reg.png" width="557" height="264"/>
     </resources>
-    <classes>
-        <class className="CompleteTransactionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CompleteTransactionViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buyNow:"/>
-                <relationship kind="outlet" name="description" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="pic" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didPressBuy:"/>
-                <relationship kind="action" name="didPressProfile:"/>
-                <relationship kind="action" name="didPressSell:"/>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressBuy:"/>
-                <relationship kind="outlet" name="descript" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="pic" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="priceL" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleL" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PendingTransactionsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PendingTransactionsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mytableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="transactionHeaderLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ProfileViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrTakePic:"/>
-                <relationship kind="action" name="pressedVenmoButton:"/>
-                <relationship kind="outlet" name="profilePic" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="SellViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SellViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addOrTakePic:"/>
-                <relationship kind="action" name="didPressDone:"/>
-                <relationship kind="outlet" name="description" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="picture" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="price" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="titleItem" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="itemSearchBar" candidateClass="UISearchBar"/>
-                <relationship kind="outlet" name="tbView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
