@@ -128,8 +128,14 @@
     // Check to see whether the normal table or search results table is being displayed and return the count from the appropriate array
     if (tableView == self.searchDisplayController.searchResultsTableView) 
         [self performSegueWithIdentifier:@"itemDetail" sender:tableView];
-    else
+    else{
+        NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
+        PFObject *itemObject = [items objectAtIndex:indexPath.row];
+        NSString *itemId = itemObject.objectId;
+        [controller setItemId:itemId];
+
         [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 - (void) reloadTableView{
@@ -171,19 +177,10 @@
     if ([[segue identifier] isEqualToString:@"itemDetail"]) {
         InfoViewController *itemDetailViewController = [segue destinationViewController];
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
-        if(sender == self.searchDisplayController.searchResultsTableView) {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
             PFObject *itemObject = [filteredItemArray objectAtIndex:indexPath.row];
-            NSString *itemId = [itemObject objectForKey:@"objectId"];
+            NSString *itemId = itemObject.objectId;
             [itemDetailViewController setItemId:itemId];
-        }
-        else {
-            NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
-            PFObject *itemObject = [items objectAtIndex:indexPath.row];
-            NSString *itemId = [itemObject objectForKey:@"objectId"];
-            [itemDetailViewController setItemId:itemId];
-            
-        }
         
     }
 }

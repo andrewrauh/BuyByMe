@@ -1,3 +1,4 @@
+
 //
 //  InfoViewController.m
 //  BuyByMe
@@ -20,7 +21,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 @end
 
 @implementation InfoViewController
-@synthesize selectedItem, userLocation, sellingUser;
+@synthesize selectedItem, userLocation, sellingUser, itemId;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
