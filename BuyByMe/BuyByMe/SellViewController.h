@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Venmo/Venmo.h>
+#import <CoreLocation/CoreLocation.h>
 
 
-@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>{
+@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>{
     
-    VenmoClient *venmoClient;
-    VenmoTransaction *venmoTransaction;
+    CLLocationManager           *locationManager;
+    CLLocation                  *userLocation;
+    
+    VenmoClient                 *venmoClient;
+    VenmoTransaction            *venmoTransaction;
     
 }
 

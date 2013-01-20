@@ -10,10 +10,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WebServices.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate, CLLocationManagerDelegate > {
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate, CLLocationManagerDelegate> {
     CLLocationManager       *locationManager;
     CLLocation              *userLocation;
-    
+    NSArray                 *items;
 }
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -26,5 +26,8 @@
 
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error;
+
+
+-(void)geoSearch;
 
 @end
