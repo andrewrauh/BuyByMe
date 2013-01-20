@@ -30,8 +30,10 @@
     [super viewDidLoad];
     self.mytableView.delegate = self;
     self.mytableView.dataSource = self;
-    
+
 	// Do any additional setup after loading the view.
+}
+-(void)viewDidAppear:(BOOL)animated {
 }
 
 - (void)didReceiveMemoryWarning
