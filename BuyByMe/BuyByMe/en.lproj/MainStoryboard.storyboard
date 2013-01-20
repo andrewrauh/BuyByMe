@@ -533,7 +533,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jQ-CW-du4">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="tsL-TM-SeF"/>
+                                    <constraint firstAttribute="width" constant="120" id="ceq-Aa-YUK"/>
                                     <constraint firstAttribute="height" constant="54" id="u7W-8j-44f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -547,7 +547,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRh-iw-IyB">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="bTC-Su-Fit"/>
+                                    <constraint firstAttribute="width" constant="120" id="hH1-Yg-Wiq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="call_reg.png">
@@ -586,7 +586,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="fPY-A2-gJk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
