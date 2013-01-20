@@ -19,6 +19,41 @@
 @implementation SellViewController
 @synthesize titleItem,description,price,picture, venmoClient;
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
+ replacementText:(NSString *)text
+{
+    
+    if ([text isEqualToString:@"\n"]) {
+        
+        [textView resignFirstResponder];
+        // Return FALSE so that the final '\n' character doesn't get added
+        return NO;
+    }
+    // For any other character return TRUE so that the text gets added to the view
+    return YES;
+}
+
+-(BOOL)textViewDidBeginEditing:(UITextField *)textField {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.35f];
+    CGRect frame = self.view.frame; frame.origin.y = -100;
+    [self.view setFrame:frame];
+    [UIView commitAnimations];
+    return YES;
+}
+
+-(BOOL)textFieldDidBeginEditing:(UITextField *)textField {
+    if (textField == price) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.35f];
+        CGRect frame = self.view.frame; frame.origin.y = -200;
+        [self.view setFrame:frame];
+        [UIView commitAnimations];
+    }
+    return YES;
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +80,7 @@
     [super viewDidLoad];
     price.delegate = self;
     titleItem.delegate = self;
+    description.delegate = self;
     
 	// Do any additional setup after loading the view.
 }
@@ -201,7 +237,24 @@ finishedSavingWithError:(NSError *)error
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == price) {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.35f];
+        CGRect frame = self.view.frame; frame.origin.y = 0;
+        [self.view setFrame:frame];
+        [UIView commitAnimations];
+    }
     [textField resignFirstResponder];
     return YES;
 }
+
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.35f];
+    CGRect frame = self.view.frame; frame.origin.y = 0;
+    [self.view setFrame:frame];
+    [UIView commitAnimations];
+    return YES;
+}
+
 @end
