@@ -13,8 +13,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "44"
          endingLineNumber = "44"
-         landmarkName = "@implementation ViewController"
-         landmarkType = "3">
+         landmarkName = "-viewDidAppear:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -26,8 +26,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "43"
          endingLineNumber = "43"
-         landmarkName = "@implementation ViewController"
-         landmarkType = "3">
+         landmarkName = "-viewDidAppear:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -104,7 +104,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "55"
          endingLineNumber = "55"
-         landmarkName = "-locationManager:didFailWithError:"
+         landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -156,8 +156,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "73"
          endingLineNumber = "73"
-         landmarkName = "@implementation ViewController"
-         landmarkType = "3">
+         landmarkName = "-geoSearch"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -169,8 +169,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "100"
          endingLineNumber = "100"
-         landmarkName = "@implementation ViewController"
-         landmarkType = "3">
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -199,7 +199,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BuyByMe/ViewController.m"
@@ -212,7 +212,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BuyByMe/ViewController.m"
@@ -221,11 +221,11 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "47"
          endingLineNumber = "47"
-         landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
-         landmarkType = "5">
+         landmarkName = "@implementation ViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BuyByMe/ViewController.m"
@@ -234,7 +234,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "70"
          endingLineNumber = "70"
-         landmarkName = "-tableView:numberOfRowsInSection:"
+         landmarkName = "-geoSearch"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -264,13 +264,4 @@
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
-   <ExceptionBreakpoints>
-      <ExceptionBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         scope = "0"
-         stopOnStyle = "0">
-      </ExceptionBreakpoint>
-   </ExceptionBreakpoints>
 </Bucket>

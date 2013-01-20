@@ -46,15 +46,15 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     venmoTransaction.note = @"hello world";
     venmoTransaction.toUserHandle = @"mattdipasquale";
     
+//    
+//     CGRect buttonRect = CGRectMake(40.0f, 20.0f, 90.0f, 40.0f);
+//     UIButton *venmoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//     venmoButton.frame = buttonRect;
+//     [venmoButton setTitle:@"Venmo" forState:UIControlStateNormal];
+//     [venmoButton addTarget:self action:@selector(openVenmoAction)
+//     forControlEvents:UIControlEventTouchUpInside];
+//     [self.view addSubview:venmoButton];
     
-     CGRect buttonRect = CGRectMake(40.0f, 20.0f, 90.0f, 40.0f);
-     UIButton *venmoButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-     venmoButton.frame = buttonRect;
-     [venmoButton setTitle:@"Venmo" forState:UIControlStateNormal];
-     [venmoButton addTarget:self action:@selector(openVenmoAction)
-     forControlEvents:UIControlEventTouchUpInside];
-     [self.view addSubview:venmoButton];
-     
 }
 
 - (void)openVenmoAction {
