@@ -96,6 +96,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     [newTransaction setObject:[item objectForKey:@"poster"] forKey:@"seller"];
     [newTransaction setObject:[PFUser currentUser] forKey:@"buyer"];
     [newTransaction setObject:item forKey:@"item"];
+    [newTransaction setObject:[item objectForKey:@"title"] forKey:@"title"];
     [newTransaction setObject:[NSNumber numberWithBool:YES] forKey:@"pending"];
     [newTransaction setObject:[item objectForKey:@"price"] forKey:@"price"];
     [newTransaction saveInBackground];
