@@ -81,9 +81,9 @@
     
     PFObject *curItem = [[curTrans objectForKey:@"item"] fetchIfNeeded];
     
-    NSLog(@"Item object Id: %@" , curItem);
+//    NSLog(@"Item object Id: %@" , curItem);
 
-    NSLog(@"Item object Id: %@" , [curItem objectForKey:@"title"]);
+//    NSLog(@"Item object Id: %@" , [[curItem objectForKey:@"title"]);
     
     PFFile *img = [curItem objectForKey:@"image"];
     if (img) {
