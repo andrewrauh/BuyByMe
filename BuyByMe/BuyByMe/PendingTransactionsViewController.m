@@ -33,7 +33,8 @@
     self.mytableView.dataSource = self;
     pendingTransactions = [[NSArray alloc] init];
     PFQuery *transactionQuery = [PFQuery queryWithClassName:@"Transaction"];
-    [transactionQuery whereKey:@"seller" equalTo:[PFUser currentUser]];
+    [transactionQuery whereKey:@"seller" equalTo:[PFUser currentUser].objectId];
+    
     #warning Add buyer match too
     
      pendingTransactions = [NSArray arrayWithArray:[transactionQuery findObjects]];
