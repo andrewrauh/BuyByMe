@@ -169,19 +169,20 @@
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"itemDetail"]) {
-        UIViewController *itemDetailViewController = [segue destinationViewController];
+        InfoViewController *itemDetailViewController = [segue destinationViewController];
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
         if(sender == self.searchDisplayController.searchResultsTableView) {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            
-            
-            NSString *destinationTitle = [[filteredItemArray objectAtIndex:[indexPath row]] objectForKey:@"title"];
-            [itemDetailViewController setTitle:destinationTitle];
+            PFObject *itemObject = [filteredItemArray objectAtIndex:indexPath.row];
+            NSString *itemId = [itemObject objectForKey:@"objectId"];
+            [itemDetailViewController setItemId:itemId];
         }
         else {
             NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
-            NSString *destinationTitle = [[items objectAtIndex:[indexPath row]] objectForKey:@"title"];
-            [itemDetailViewController setTitle:destinationTitle];
+            PFObject *itemObject = [items objectAtIndex:indexPath.row];
+            NSString *itemId = [itemObject objectForKey:@"objectId"];
+            [itemDetailViewController setItemId:itemId];
+            
         }
         
     }

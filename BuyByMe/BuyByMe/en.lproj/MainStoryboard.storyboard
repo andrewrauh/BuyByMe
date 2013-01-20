@@ -597,6 +597,7 @@
                     <navigationItem key="navigationItem" id="YPU-Rf-FqH"/>
                     <connections>
                         <outlet property="mytableView" destination="cgP-DL-32e" id="47s-Qx-P40"/>
+                        <outlet property="transactionHeaderLabel" destination="Ro7-WC-GCd" id="eJu-ZF-fe2"/>
                         <segue destination="syp-DQ-RR7" kind="push" id="PAw-Es-Ns3"/>
                     </connections>
                 </viewController>
@@ -649,6 +650,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PendingTransactionsViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="mytableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="transactionHeaderLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="ProfileViewController" superclassName="UIViewController">

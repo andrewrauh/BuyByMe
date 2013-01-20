@@ -12,4 +12,5 @@
 
 @property (nonatomic, retain) NSArray *pendingTransactions;
 @property (nonatomic, retain) IBOutlet UITableView *mytableView;
+@property (nonatomic, retain) IBOutlet UILabel *transactionHeaderLabel;
 @end

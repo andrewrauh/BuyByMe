@@ -15,7 +15,7 @@
 @end
 
 @implementation PendingTransactionsViewController
-@synthesize mytableView, pendingTransactions;
+@synthesize mytableView, pendingTransactions, transactionHeaderLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +37,8 @@
     #warning Add buyer match too
     
      pendingTransactions = [NSArray arrayWithArray:[transactionQuery findObjects]];
-	// Do any additional setup after loading the view.
+    [transactionHeaderLabel setText:[NSString stringWithFormat:@"You have %d Pending Transactions", [pendingTransactions count]]];
+    // Do any additional setup after loading the view.
 }
 -(void)viewDidAppear:(BOOL)animated {
 }
@@ -59,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"Number of rows called");
     // Return the number of rows in the section.
-    return 9;
+    return [pendingTransactions count];
 }
 
 // Customize the appearance of table view cells.

@@ -69,7 +69,10 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 -(IBAction)pressBuy:(id)sender{
     // set Item to inactive
-    PFObject *item = [PFObject objectWithClassName:@"Item"];
+    //PFObject *item = [PFObject objectWithClassName:@"Item"];
+    PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+    NSLog(@"Item id is %@", itemId);
+    PFObject *item = [query getObjectWithId:itemId];
     [item setObject:[NSNumber numberWithBool:NO] forKey:@"active"];
     [item saveInBackground];
     
@@ -77,11 +80,11 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     PFObject *newTransaction = [PFObject objectWithClassName:@"Transaction"];
     
     
-    [newTransaction setObject:[Item valueForKey:@"poster"] forKey:@"seller"];
+    [newTransaction setObject:[item objectForKey:@"poster"] forKey:@"seller"];
     [newTransaction setObject:[PFUser currentUser] forKey:@"buyer"];
     [newTransaction setObject:item forKey:@"item"];
-    [newTransaction setObject:[NSNumber numberWithBool:NO] forKey:@"pending"];
-    [newTransaction setObject:[item valueForKey:@"price"] forKey:@"price"];
+    [newTransaction setObject:[NSNumber numberWithBool:YES] forKey:@"pending"];
+    [newTransaction setObject:[item objectForKey:@"price"] forKey:@"price"];
     [newTransaction saveInBackground];
 }
 
