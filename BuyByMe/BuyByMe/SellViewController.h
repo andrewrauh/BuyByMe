@@ -12,7 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>{
+@interface SellViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate, CLLocationManagerDelegate, UITextFieldDelegate>{
     
     CLLocationManager           *locationManager;
     CLLocation                  *userLocation;
