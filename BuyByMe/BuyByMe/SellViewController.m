@@ -31,6 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager startUpdatingLocation];
+    locationManager.delegate = self;
 	// Do any additional setup after loading the view.
 }
 
@@ -38,6 +41,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"Location: %@", [newLocation description]);
+    userLocation = newLocation;
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+	NSLog(@"Error: %@", [error description]);
 }
 
 -(IBAction)addOrTakePic:(id)sender {
@@ -131,9 +149,15 @@ finishedSavingWithError:(NSError *)error
     [newItem setPrice:[NSNumber numberWithInt:[price.text integerValue]]];
     [newItem setPicture:picture.image];
     
+    PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:userLocation.coordinate.latitude longitude:userLocation.coordinate.longitude];
+    
+    
     // Create the Item
     PFObject *myItem = [PFObject objectWithClassName:@"Item"];
+    [myItem setObject:point forKey:@"location"];
     [myItem setObject:newItem.title forKey:@"title"];
+    [myItem setObject:[NSNumber numberWithBool:YES] forKey:@"active"];
+    [myItem setObject:[NSNumber numberWithBool:NO] forKey:@"negotiable"];
     [myItem setObject:newItem.description forKey:@"description"];
     [myItem setObject:[NSNumber numberWithInt:[price.text integerValue]] forKey:@"price"];
     
@@ -145,8 +169,7 @@ finishedSavingWithError:(NSError *)error
     
     // This will save both myPost and myComment
     [myItem saveInBackground];
-    
-    
+
     
 }
 @end

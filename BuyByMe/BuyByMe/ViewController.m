@@ -26,10 +26,6 @@
     webServices.delegate =self;
     [webServices retrieveAllPostedItems];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    locationManager = [[CLLocationManager alloc] init];
-    [locationManager startUpdatingLocation];
-    locationManager.delegate = self;
 
 }
 
@@ -39,21 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
-{
- //   NSLog(@"Location: %@", [newLocation description]);
-    userLocation = newLocation;
-}
-
-
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error
-{
-	NSLog(@"Error: %@", [error description]);
-}
 
 //UITableViewMethods
 

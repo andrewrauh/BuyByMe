@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WebServices.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate, CLLocationManagerDelegate > {
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ProcessDataDelegate> {
     CLLocationManager       *locationManager;
     CLLocation              *userLocation;
     
