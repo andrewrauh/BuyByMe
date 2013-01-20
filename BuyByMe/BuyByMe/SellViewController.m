@@ -27,19 +27,25 @@
     }
     return self;
 }
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
     locationManager = [[CLLocationManager alloc] init];
     [locationManager startUpdatingLocation];
     locationManager.delegate = self;
     
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [locationManager stopUpdatingLocation];
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
--(void)viewDidAppear:(BOOL)animated {
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
