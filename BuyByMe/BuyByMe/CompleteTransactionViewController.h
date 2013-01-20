@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+<<<<<<< HEAD
+#import <Venmo/Venmo.h>
+@interface CompleteTransactionViewController : UIViewController{
+    
+    VenmoTransaction            *venmoTransaction;
+    
+}
 
 @interface CompleteTransactionViewController : UIViewController
 @property (nonatomic, strong) IBOutlet UIImageView *pic;
