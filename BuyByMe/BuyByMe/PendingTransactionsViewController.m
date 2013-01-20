@@ -79,7 +79,7 @@
     
     PFObject *curTrans = pendingTransactions[indexPath.row];
     
-    PFObject *curItem = [[curTrans objectForKey:@"item"] fetchIfNeeded];
+    PFObject *curItem = [[curTrans objectForKey:@"item"]fetchIfNeeded];
     
 //    NSLog(@"Item object Id: %@" , curItem);
 

@@ -59,6 +59,12 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 
 -(IBAction)buyNow:(id)sender{
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    VenmoViewController *venmoViewController = [appDelegate.venmoClient viewControllerWithTransaction:
+                                                venmoTransaction];
+    if (venmoViewController) {
+        [self presentModalViewController:venmoViewController animated:YES];
+    }
     
 }
 
