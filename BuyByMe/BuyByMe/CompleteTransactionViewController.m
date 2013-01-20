@@ -38,10 +38,19 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
     
     venmoTransaction = [[VenmoTransaction alloc] init];
     venmoTransaction.type = VenmoTransactionTypePay;
-    venmoTransaction.amount = [NSDecimalNumber decimalNumberWithString:@"3.45"];
-    venmoTransaction.note = @"hello world";
-    venmoTransaction.toUserHandle = @"mattdipasquale";
+    NSNumber *number = [item objectForKey:@"price"];
+    NSLog(@"Number is %@", number);
+    NSString *string = [number stringValue];
+    NSString *itemDescription = [item objectForKey:@"description"];
+    venmoTransaction.amount = [NSDecimalNumber decimalNumberWithString:string];
+    venmoTransaction.note = itemDescription;
+    venmoTransaction.toUserHandle = @"Jesse-Daughtery";
 	// Do any additional setup after loading the view.
+}
+
+
+-(IBAction)buyNow:(id)sender{
+    
 }
 
 - (void)didReceiveMemoryWarning
