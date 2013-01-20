@@ -12,19 +12,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVc-xx-X51">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Profile">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didPressProfile:" destination="75q-6A-BWE" eventType="touchUpInside" id="cQo-Ko-Mbx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltm-7p-Wpp">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sell">
@@ -67,25 +54,37 @@
                                     <segue destination="hag-pe-aoy" kind="push" id="s6r-Vx-vpF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-WJ-AgF">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pending Transactions">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="u0B-VJ-Dan" kind="push" id="Bbi-IP-bOa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="top" secondItem="iVc-xx-X51" secondAttribute="top" type="default" id="7lS-n3-DHx"/>
-                            <constraint firstAttribute="bottom" secondItem="HbZ-US-fIp" secondAttribute="bottom" constant="148" id="7vw-0i-ApC"/>
                             <constraint firstItem="HbZ-US-fIp" firstAttribute="centerX" secondItem="Ivg-SB-WzC" secondAttribute="centerX" type="default" id="8nE-7X-LDE"/>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="baseline" secondItem="iVc-xx-X51" secondAttribute="baseline" type="default" id="V2T-Zz-BHr"/>
+                            <constraint firstItem="HbZ-US-fIp" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="155" id="Aek-5P-hzz"/>
+                            <constraint firstItem="WHU-WJ-AgF" firstAttribute="centerX" secondItem="HbZ-US-fIp" secondAttribute="centerX" type="default" id="Xe0-XU-ENg"/>
+                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="top" secondItem="9Vt-9t-95J" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="c94-eg-PWK"/>
+                            <constraint firstItem="WHU-WJ-AgF" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="210" id="f0c-ne-mSo"/>
                             <constraint firstItem="9Vt-9t-95J" firstAttribute="leading" secondItem="ltm-7p-Wpp" secondAttribute="leading" type="default" id="l9m-38-Svh"/>
-                            <constraint firstItem="HbZ-US-fIp" firstAttribute="leading" secondItem="iVc-xx-X51" secondAttribute="leading" type="default" id="oX3-9J-v6c"/>
-                            <constraint firstItem="iVc-xx-X51" firstAttribute="centerX" secondItem="9Vt-9t-95J" secondAttribute="centerX" type="default" id="thB-w8-cIZ"/>
-                            <constraint firstItem="9Vt-9t-95J" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="139" id="wwm-8J-mS7"/>
-                            <constraint firstItem="ltm-7p-Wpp" firstAttribute="top" secondItem="Ivg-SB-WzC" secondAttribute="top" constant="230" id="y2d-DH-vPq"/>
+                            <constraint firstItem="HbZ-US-fIp" firstAttribute="centerX" secondItem="9Vt-9t-95J" secondAttribute="centerX" type="default" id="nMt-zf-kC7"/>
+                            <constraint firstItem="HbZ-US-fIp" firstAttribute="top" secondItem="ltm-7p-Wpp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tcX-mK-DhO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gHp-st-37S"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UrW-5q-Xy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="-408"/>
+            <point key="canvasLocation" x="-209" y="-300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JgT-3f-wwx">
@@ -352,11 +351,116 @@
             </objects>
             <point key="canvasLocation" x="414" y="494"/>
         </scene>
+        <!--Complete Transaction View Controller-->
+        <scene sceneID="MQ9-V2-Qye">
+            <objects>
+                <viewController storyboardIdentifier="CompleteVC" id="syp-DQ-RR7" customClass="CompleteTransactionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ziy-AM-UR1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="chris2.png" translatesAutoresizingMaskIntoConstraints="NO" id="pzi-eQ-jXZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="3rO-4R-AoR"/>
+                                    <constraint firstAttribute="width" constant="201" id="U7A-3m-tQR"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jQ-CW-du4">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pay Now">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRh-iw-IyB">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s08-mF-4LR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="More Info">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2jQ-CW-du4" firstAttribute="centerX" secondItem="pzi-eQ-jXZ" secondAttribute="centerX" type="default" id="3cO-Rx-Org"/>
+                            <constraint firstItem="pRh-iw-IyB" firstAttribute="centerX" secondItem="2jQ-CW-du4" secondAttribute="centerX" type="default" id="5R8-Y0-EGW"/>
+                            <constraint firstItem="s08-mF-4LR" firstAttribute="centerX" secondItem="pRh-iw-IyB" secondAttribute="centerX" type="default" id="I15-xQ-6mk"/>
+                            <constraint firstAttribute="bottom" secondItem="pRh-iw-IyB" secondAttribute="bottom" constant="149" id="VGx-j4-fo6"/>
+                            <constraint firstItem="pzi-eQ-jXZ" firstAttribute="top" secondItem="Ziy-AM-UR1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="b0Z-2J-IXo"/>
+                            <constraint firstItem="pzi-eQ-jXZ" firstAttribute="leading" secondItem="Ziy-AM-UR1" secondAttribute="leading" constant="69" id="r9p-9k-iMG"/>
+                            <constraint firstItem="pRh-iw-IyB" firstAttribute="top" secondItem="2jQ-CW-du4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vYW-pM-HGt"/>
+                            <constraint firstAttribute="bottom" secondItem="s08-mF-4LR" secondAttribute="bottom" constant="97" id="wdK-WR-Xgj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uCB-rV-rMi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyp-0N-FCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="1236"/>
+        </scene>
+        <!--Pending Transactions View Controller-->
+        <scene sceneID="efc-AE-Z9V">
+            <objects>
+                <viewController id="u0B-VJ-Dan" customClass="PendingTransactionsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lQB-pc-48M">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-DL-32e">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="305" id="i6v-su-Opn"/>
+                                    <constraint firstAttribute="height" constant="442" id="oCN-hl-X54"/>
+                                </constraints>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You have 5 Pending Transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ro7-WC-GCd">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ro7-WC-GCd" firstAttribute="centerX" secondItem="cgP-DL-32e" secondAttribute="centerX" type="default" id="cvo-yq-JYx"/>
+                            <constraint firstItem="cgP-DL-32e" firstAttribute="top" secondItem="lQB-pc-48M" secondAttribute="top" constant="57" id="gla-sc-hzc"/>
+                            <constraint firstItem="Ro7-WC-GCd" firstAttribute="top" secondItem="lQB-pc-48M" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jJC-yz-I3F"/>
+                            <constraint firstItem="Ro7-WC-GCd" firstAttribute="centerX" secondItem="lQB-pc-48M" secondAttribute="centerX" type="default" id="odN-n2-uuf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YPU-Rf-FqH"/>
+                    <connections>
+                        <outlet property="mytableView" destination="cgP-DL-32e" id="47s-Qx-P40"/>
+                        <segue destination="syp-DQ-RR7" kind="push" id="PAw-Es-Ns3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6e6-7B-fpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="1228"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chris2.png" width="225" height="179"/>
     </resources>
     <classes>
+        <class className="CompleteTransactionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CompleteTransactionViewController.h"/>
+        </class>
         <class className="FirstViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
             <relationships>
@@ -373,6 +477,12 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PendingTransactionsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PendingTransactionsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mytableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="ProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>

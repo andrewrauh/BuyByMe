@@ -14,11 +14,12 @@ static NSString *const kVenmoAppId      = @"1220";
 static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 
 @interface InfoViewController ()
+@property (nonatomic, strong) User *sellingUser;
 
 @end
 
 @implementation InfoViewController
-@synthesize selectedItem;
+@synthesize selectedItem, userLocation, sellingUser;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,6 +68,13 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
 -(IBAction)pressBuy:(id)sender{
     WebServices *webServices = [WebServices sharedInstance];
     [webServices retrieveSellerUserData:selectedItem.posterId];
+     sellingUser = [[User alloc]init];
+     [sellingUser setFirstname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"first_name"]];
+     [sellingUser setLastname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"last_name"]];
+    [sellingUser setLastname:[[webServices.sellingUser objectForKey:@"user"]objectForKey:@"last_name"]];
+    //venmoId, firstname, lastname, isBuyer, isVerified,profilePic
+//      [sellingUser setIsBuyer:[]
+
 }
 
 -(void)checkLocations{
@@ -76,6 +84,7 @@ static NSString *const kVenmoAppSecret  = @"EmSsSkJWqcGywDCQYh9yfd59kKw5wehT";
         NSLog(@"They are more than 1000 meters away from one another");
     }
 }
+
 
 - (void)didReceiveMemoryWarning
 {

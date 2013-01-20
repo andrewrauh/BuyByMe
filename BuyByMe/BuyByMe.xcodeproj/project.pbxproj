@@ -43,6 +43,8 @@
 		F9F6360116AA6225004DD1E5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F6360016AA6225004DD1E5 /* CoreLocation.framework */; };
 		F9F6360816AA808C004DD1E5 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6360716AA808C004DD1E5 /* InfoViewController.m */; };
 		F9F6361B16AB0B60004DD1E5 /* libVenmo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29A4D716AB056600B9AE1F /* libVenmo.a */; };
+		F9F6361E16AB63AC004DD1E5 /* PendingTransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6361D16AB63AC004DD1E5 /* PendingTransactionsViewController.m */; };
+		F9F6362116AB69AF004DD1E5 /* CompleteTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F6362016AB69AF004DD1E5 /* CompleteTransactionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,10 @@
 		F9F6360016AA6225004DD1E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F9F6360616AA808B004DD1E5 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		F9F6360716AA808C004DD1E5 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		F9F6361C16AB63AB004DD1E5 /* PendingTransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTransactionsViewController.h; sourceTree = "<group>"; };
+		F9F6361D16AB63AC004DD1E5 /* PendingTransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTransactionsViewController.m; sourceTree = "<group>"; };
+		F9F6361F16AB69AE004DD1E5 /* CompleteTransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteTransactionViewController.h; sourceTree = "<group>"; };
+		F9F6362016AB69AF004DD1E5 /* CompleteTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteTransactionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +448,10 @@
 				AF29A48216AA5AD800B9AE1F /* CLController.m */,
 				F9F6360616AA808B004DD1E5 /* InfoViewController.h */,
 				F9F6360716AA808C004DD1E5 /* InfoViewController.m */,
+				F9F6361C16AB63AB004DD1E5 /* PendingTransactionsViewController.h */,
+				F9F6361D16AB63AC004DD1E5 /* PendingTransactionsViewController.m */,
+				F9F6361F16AB69AE004DD1E5 /* CompleteTransactionViewController.h */,
+				F9F6362016AB69AF004DD1E5 /* CompleteTransactionViewController.m */,
 			);
 			path = BuyByMe;
 			sourceTree = "<group>";
@@ -571,6 +581,8 @@
 				AF29A44116AA449A00B9AE1F /* Offer.m in Sources */,
 				AF29A48316AA5AD800B9AE1F /* CLController.m in Sources */,
 				F9F6360816AA808C004DD1E5 /* InfoViewController.m in Sources */,
+				F9F6361E16AB63AC004DD1E5 /* PendingTransactionsViewController.m in Sources */,
+				F9F6362116AB69AF004DD1E5 /* CompleteTransactionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
