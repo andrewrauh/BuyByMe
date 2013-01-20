@@ -128,8 +128,9 @@
     // Check to see whether the normal table or search results table is being displayed and return the count from the appropriate array
     if (tableView == self.searchDisplayController.searchResultsTableView) 
         [self performSegueWithIdentifier:@"itemDetail" sender:tableView];
-    else
+    else{
         [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 - (void) reloadTableView{
@@ -169,12 +170,12 @@
 #pragma mark - Segue
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"itemDetail"]) {
-        UIViewController *itemDetailViewController = [segue destinationViewController];
+        InfoViewController *itemDetailViewController = [segue destinationViewController];
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
         if(sender == self.searchDisplayController.searchResultsTableView) {
             NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[filteredItemArray objectAtIndex:[indexPath row]] name];
-            [itemDetailViewController setTitle:destinationTitle];
+           // NSString *destinationTitle = [[filteredItemArray objectAtIndex:[indexPath row]] name];
+            //[itemDetailViewController setTitle:destinationTitle];
         }
         else {
             NSIndexPath *indexPath = [self.tbView indexPathForSelectedRow];
